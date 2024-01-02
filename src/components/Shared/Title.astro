@@ -1,0 +1,20 @@
+---
+import '@fontsource/rubik-dirt';
+
+interface Props {
+  title: string;
+  className: string;
+}
+
+const { title, className } = Astro.props
+---
+
+<h1 class={`${className} dark:text-primary text-fifth transition duration-300 text-balance`}>
+  {title}
+</h1>
+
+<style>
+  h1 {
+    font-family: 'Rubik Dirt', sans-serif;
+  }
+</style>

@@ -1,0 +1,124 @@
+---
+import ToggleTheme from "../helpers/ToggleTheme.astro";
+import XIcon from '../icons/XIcon.astro';
+import MenuIcon from '../icons/MenuIcon.astro';
+import HomeIcon from '../icons/HomeIcon.astro';
+import ExperienceIcon from '../icons/ExperienceIcon.astro';
+import ProjectsIcon from '../icons/ProjectsIcon.astro';
+import AboutIcon from '../icons/AboutIcon.astro';
+import ContactIcon from '../icons/ContactIcon.astro';
+
+interface navbarLinksProps {
+  title: string;
+  link: string;
+  icon: string;
+}
+
+const navbarLinks: navbarLinksProps[] = [
+  {
+    title: 'Inicio',
+    link: '#inicio',
+    icon: 'HomeIcon'
+  },
+  {
+    title: 'Experiencia',
+    link: '#experiencia',
+    icon: 'ExperienceIcon'
+  },
+  {
+    title: 'Proyectos',
+    link: '#proyectos',
+    icon: 'ProjectsIcon'
+  },
+  {
+    title: 'Sobre mí',
+    link: '#sobreMi',
+    icon: 'AboutIcon'
+  },
+  {
+    title: 'Contacto',
+    link: '#contacto',
+    icon: 'ContactIcon'
+  }
+]
+---
+<nav class="flex justify-between items-center py-3 max-w-7xl mx-auto fixed w-full backdrop-blur-md 
+px-4 lg:px-28 z-50">
+  <img
+    class="size-8 rounded-full cursor-pointer lg:size-6" 
+    src="/imagenes/General/LogoAS.webp" 
+    alt="Logo"
+    title="Logo"
+  />
+
+  <div class="text-grayStrong dark:text-gray lg:hidden">
+    <MenuIcon id="menuIcon" class="size-8 cursor-pointer transition duration-700" />
+    <XIcon id="closeMenuIcon" class="size-8 absolute top-3 right-4 scale-0 z-[9999] transition duration-700" />
+  </div>
+
+  <ul 
+    id="menuMobile" 
+    class="h-screen w-screen text-grayStrong dark:text-gray px-4 transition duration-700
+    scale-0 flex flex-col items-start justify-center gap-y-8 gap-x-12 
+    dark:bg-gradient-to-r dark:from-secondary/95 dark:to-third bg-gradient-to-r from-white/95 to-fourth 
+    max-[1024px]:fixed max-[1024px]:text-4xl max-[1024px]:left-0 max-[1024px]:top-0
+    lg:h-auto lg:w-auto lg:flex-row lg:px-0 lg:scale-100 lg:bg-none lg:dark:bg-none">
+    {navbarLinks.map(({ title, link, icon }) => (
+      <li class="dark:lg:hover:text-primary lg:hover:text-purple-700 transition w-[92%]
+      border-b dark:border-gray border-grayStrong pb-2 flex justify-between items-center
+      lg:border-none lg:pb-0 lg:justify-center lg:w-auto">
+        <a class="flex justify-between items-center w-full" href={link}>
+          {title}
+          <span class="lg:hidden">
+            {icon === 'HomeIcon' 
+              ? <HomeIcon class="size-8" /> 
+              : icon === 'ExperienceIcon'
+                ? <ExperienceIcon class="size-8" />
+                : icon === 'ProjectsIcon'
+                  ? <ProjectsIcon class="size-8" />
+                  : icon === 'AboutIcon'
+                    ? <AboutIcon class="size-8" />
+                    : icon === 'ContactIcon'
+                      ? <ContactIcon class="size-8" />
+                      : null
+            }
+          </span>
+        </a>
+      </li>
+    ))}
+  </ul>
+
+  <aside id="toggleTheme" class="absolute max-[1024px]:top-4 scale-0 transition duration-700
+  max-[1024px]:bottom-0 lg:relative lg:scale-100 lg:flex lg:justify-center lg:items-center">
+    <ToggleTheme />
+  </aside>
+</nav>
+
+<script>
+  const menuIcon = document.getElementById('menuIcon');
+  const closeMenuIcon = document.getElementById('closeMenuIcon');
+  const menuMobile = document.getElementById('menuMobile');
+  const toggleTheme = document.getElementById('toggleTheme');
+  const menuItems = document.querySelectorAll('li');
+
+  const toggleItems = () => {
+    menuIcon?.classList.toggle('scale-0');
+    closeMenuIcon?.classList.toggle('scale-0');
+    menuMobile?.classList.toggle('scale-0');
+    toggleTheme?.classList.toggle('scale-0');
+  }
+
+  menuIcon?.addEventListener('click', () => {
+    toggleItems();
+  });
+
+  closeMenuIcon?.addEventListener('click', () => {
+    toggleItems();
+  });
+
+  menuItems.forEach(menuItem => {
+    menuItem.addEventListener('click', () => {
+      toggleItems();
+    })
+  });
+</script>

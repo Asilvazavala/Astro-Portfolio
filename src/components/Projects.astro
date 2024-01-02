@@ -1,0 +1,496 @@
+---
+import SectionContainer from "./SectionContainer.astro";
+import ProjectsIcon from '../icons/ProjectsIcon.astro';
+import Title from "./Shared/Title.astro";
+
+interface projectsProps {
+  image:  string;
+  cardColor: string;
+  title: string;
+  description: string;
+  techs: string[];
+  githubLink: string;
+  liveLink: string;
+}
+
+const projects: projectsProps[] = [
+  {
+    image: '/imagenes/Projects/valle-de-santiago.webp',
+    cardColor: '',
+    title: 'Hoy',
+    description: 'Actualmente aprendiendo la nueva versión de Angular 17 realizando proyectos.',
+    techs: [],
+    githubLink: '',
+    liveLink: ''
+  },
+  {
+    image: '/imagenes/Projects/ecommerce-burger-house.webp',
+    cardColor: '',
+    title: 'Hoy',
+    description: 'Actualmente aprendiendo la nueva versión de Angular 17 realizando proyectos.',
+    techs: [],
+    githubLink: '',
+    liveLink: ''
+  },
+  {
+    image: '/imagenes/Projects/Real-estate.webp',
+    cardColor: '',
+    title: 'Hoy',
+    description: 'Actualmente aprendiendo la nueva versión de Angular 17 realizando proyectos.',
+    techs: [],
+    githubLink: '',
+    liveLink: ''
+  },
+  {
+    image: '/imagenes/Projects/Clinica-fisio.webp',
+    cardColor: '',
+    title: 'Hoy',
+    description: 'Actualmente aprendiendo la nueva versión de Angular 17 realizando proyectos.',
+    techs: [],
+    githubLink: '',
+    liveLink: ''
+  },
+];
+---
+
+<SectionContainer>
+  <div id="proyectos" class="flex justify-center lg:justify-start items-center gap-x-2 mb-8 pt-12 mt-16">
+    <ProjectsIcon class="dark:text-grayStrong text-gray size-10" />
+    <Title className="text-4xl" title="Proyectos" />
+  </div>
+
+  <header id="tranding">
+    <aside class="containerProjectsSlider">
+      <aside class="swiper tranding-slider">
+        <div class="swiper-wrapper">
+          {projects.map(({ image, cardColor, title, description, techs, githubLink, liveLink }) => (
+            <article class={`swiper-slide tranding-slide ${cardColor}`}>
+              <figure class="tranding-slide-img">
+                <img 
+                  loading="lazy" 
+                  decoding="async" 
+                  src={image} 
+                  alt={title}
+                  title={title}
+                />
+              </figure>
+              <main class="tranding-slide-content">
+                <h2 class="project-name">{title}</h2>
+                <p class="project-description">{description}</p>
+                <footer class="slide-content-footer">
+                  <div class="stacks">
+                    {techs.map(tech => (
+                      <div></div>
+                    ))}         
+                  </div>
+                  <div class="buttons-Projects">
+                    <article>
+                      <a href={githubLink} target="_blank" rel="noopener"><i class="bi bi-github"></i></a>
+                      <h5 class="codeLiveText">Code</h5>
+                    </article>
+                    <article>
+                      <a href={liveLink} target="_blank" rel="noopener"><i class="bi bi-laptop liveIcon"></i></a>
+                      <h5 class="codeLiveText">Live</h5>
+                    </article>           
+                  </div>
+                </footer>
+              </main>
+            </article>
+          ))}
+        </div>
+
+        <aside class="tranding-slider-control">
+          <div class="swiper-button-prev slider-arrow">
+            <ion-icon name="arrow-back-outline"></ion-icon>
+          </div>
+          <div class="swiper-button-next slider-arrow">
+            <ion-icon name="arrow-forward-outline"></ion-icon>
+          </div>
+          <div class="swiper-pagination"></div>
+        </aside>
+
+      </div>
+    </aside>
+  </header>
+</SectionContainer>
+
+<script>
+  import Swiper from 'swiper';
+  import 'swiper/css';
+
+  document.addEventListener('DOMContentLoaded', function () {
+  var TrandingSlider = new Swiper('.tranding-slider', {
+    effect: 'coverflow',
+    grabCursor: true,
+    centeredSlides: true,
+    loop: true,
+    slidesPerView: 'auto',
+    coverflowEffect: {
+      rotate: 0,
+      stretch: 0,
+      depth: 100,
+      modifier: 2.5,
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+
+  var slides = document.querySelectorAll('.swiper-slide');  
+  slides.forEach(function (slide, index) {
+    slide.addEventListener('click', function () {
+      TrandingSlider.slideTo(index);
+    });
+  });
+});
+</script>
+
+<style>
+  .containerProjectsSlider {
+  max-width: 1050px;
+  padding: 0 1rem;
+  margin: 0 auto;
+}
+
+@media (max-width:1100px) {
+  .containerProjectsSlider {
+    max-width: 95vw;
+    padding: 0 .5rem;
+  }
+}
+
+#tranding {
+  padding: 0 0 4rem 0;
+  margin-bottom: 7rem;
+}
+
+#tranding .tranding-slider {
+  height: 33rem;
+  padding: 2rem 0;
+  position: relative;
+}
+
+@media (max-width:500px) {
+  #tranding .tranding-slider {
+    height: 34rem;
+  }
+}
+
+.tranding-slide {
+  width: 21rem;
+  height: 25rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  position: relative;
+}
+
+.tranding-slide-img {
+  width: 100%;
+  height: 10.5rem;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+.tranding-slide-img img {
+  width: 100%;
+  object-fit: cover;
+  height: auto;
+}
+
+
+.imgBank img,
+.imgEcommerceBurger img,
+.imgCar img,
+.imgClinica img,
+.imgMySeam img {
+  transition: 7s linear;
+}
+
+.imgValle img {
+  transition: 10s linear;
+}
+
+.imgRealState img,
+.imgGym img {
+  transition: 10s linear;
+}
+
+.imgDashboard img {
+  transition: 2s linear;
+}
+
+.imgShorter img,
+.imgPokemon img,
+.imgCountries img,
+.imgBlog img {
+  transition: 5s linear;
+}
+
+.imgBank img:hover {
+  transform: translateY(-69%)
+}
+
+.imgBlog img:hover {
+  transform: translateY(-72%)
+}
+
+.imgValle img:hover {
+  transform: translateY(-76%)
+}
+
+.imgMySeam img:hover,
+.imgClinica img:hover {
+  transform: translateY(-78%)
+}
+
+.imgCar img:hover,
+.imgCountries img:hover {
+  transform: translateY(-74%)
+}
+
+.imgDashboard img:hover {
+  transform: translateY(-8%)
+}
+
+.imgEcommerceBurger img:hover {
+  transform: translateY(-61%)
+}
+
+.imgPokemon img:hover {
+  transform: translateY(-55%)
+}
+
+.imgShorter img:hover {
+  transform: translateY(-63%)
+}
+
+.imgRealState img:hover {
+  transform: translateY(-83%)
+}
+
+.imgGym img:hover {
+  transform: translateY(-86%)
+}
+
+.imgSinEfecto img {
+  height: 10.5rem;
+}
+
+  .tranding-slide .tranding-slide-content {
+  margin-top: -.4rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-name {
+  color: white !important;
+  font-weight: bolder;
+  font-size: 1.6rem;
+  transition-property: opacity;
+  transition: .3s ease;
+  width: fit-content;
+  margin-top: -.2rem;
+}
+
+.project-description {
+  color: #bbbbbb;
+  font-weight: 400;
+  font-size: 1rem;
+  margin-top: -.5rem;
+}
+
+.slide-content-footer {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 89%;
+  bottom: -14rem;
+  z-index: -1;
+}
+
+.slide-content-footer .stacks {
+  column-gap: .2rem;
+  display: flex;
+  position: relative;
+}
+
+.slide-content-footer .stacks img {
+  width: 30px;
+  height: 30px;
+  margin-bottom: .7rem;
+  opacity: 1;
+}
+
+.buttons-Projects h5, 
+.slide-content-footer .stacks h5 {
+  position: absolute;
+  margin-top: 3.5rem;
+  border-radius: 1rem;
+  padding: .2rem .6rem;
+  font-size: 1rem;
+  opacity: 0;
+  transition: .3s ease;
+  transition-property: opacity;
+}
+
+
+.buttons-Projects h5 {
+  margin-top: 4.5rem;
+}
+
+.buttons-Projects a:hover+ h5 {
+  opacity: 1;
+} 
+
+.stacks img:hover+ h5 {
+  opacity: 1;
+}
+
+.buttons-Projects {
+  display: flex;
+  column-gap: .7rem;
+  margin-bottom: 1rem;
+  right: 0;
+  position: absolute;
+}
+
+.slide-content-footer .stacks article,
+.buttons-Projects article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttons-Projects i {
+  font-size: 2rem;
+  color: white;
+  transition: .3s ease-in-out;
+  transition-property: color;
+}
+
+.buttons-Projects .liveIcon {
+  font-size: 2.3rem;
+}
+
+@media (max-width:500px) {
+  .buttons-Projects {
+    column-gap: .5rem;
+    margin-bottom: 0;
+  }
+
+  .slide-content-footer .stacks {
+    column-gap: .1rem;
+    margin-top: 1rem;
+  }
+
+  .buttons-Projects i {
+    font-size: 1.7rem;
+  }
+
+  .buttons-Projects .liveIcon {
+    font-size: 2rem;
+  }
+
+  .slide-content-footer .stacks img {
+    width: 27px;
+    height: 27px;
+    margin-bottom: .9rem;
+  }
+}
+
+.buttons-Projects i:hover {
+  color: #0B1120;
+}
+
+
+.swiper-slide-shadow-left,
+.swiper-slide-shadow-right {
+  display: none;
+}
+
+.tranding-slider-control {
+  position: relative;
+  bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tranding-slider-control .swiper-button-next {
+  left: 66% !important;
+  transform: translateX(-66%) !important;
+  z-index: 100;
+}
+
+.tranding-slider-control .swiper-button-prev {
+  z-index: 100;
+}
+
+@media (max-width:990px) {
+  .tranding-slider-control .swiper-button-prev,
+  .tranding-slider-control .swiper-button-next {
+    display: none;
+  }
+}
+
+.tranding-slider-control .slider-arrow {
+  background: var(--white);
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  left: 34%;
+  transform: translateX(-34%);
+  filter: drop-shadow(0px 8px 24px rgba(18, 28, 53, 0.1));
+  font-size: 2rem;
+  color: #222224;
+  transition: .3s ease-in-out;
+  transition-property: background, color;
+}
+
+.tranding-slider-control .slider-arrow:hover {
+  color: var(--blueLight-white);
+  background: var(--blueStrong-black);
+}
+
+.tranding-slider-control .slider-arrow::after {
+  content: '';
+}
+
+.tranding-slider-control .swiper-pagination {
+  position: relative;
+  width: 15rem;
+  bottom: -.2rem;
+}
+
+.tranding-slider-control .swiper-pagination .swiper-pagination-bullet {
+  filter: drop-shadow(0px 8px 24px rgba(18, 28, 53, 0.1));
+}
+
+.tranding-slider-control .swiper-pagination .swiper-pagination-bullet-active {
+  background: var(--blueLight-black);
+}
+
+.swiper-slide {
+  opacity: .5;
+}
+
+.swiper-slide-active {
+  opacity: 1;
+}
+
+.proyectos-recientes {
+  padding-top: 5rem;
+}
+
+.proyectos-recientes h2 {
+  color: var(--blueLight-black);
+  transition: all 1s ease-in-out 0s;
+}
+</style>

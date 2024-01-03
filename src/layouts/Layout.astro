@@ -33,6 +33,18 @@ const { title, description } = Astro.props;
   	font-family: 'Onest Variable', sans-serif;
 		scroll-behavior: smooth;
 	}
+
+	@media (min-width: 2000px) {
+  html {
+    zoom: 1.5;
+  }
+}
+
+@media (min-width: 3000px) {
+  html {
+    zoom: 2;
+  }
+}
 </style>
 
 <script>

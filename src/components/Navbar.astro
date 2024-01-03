@@ -2,6 +2,7 @@
 import ToggleTheme from "../helpers/ToggleTheme.astro";
 import XIcon from '../icons/XIcon.astro';
 import MenuIcon from '../icons/MenuIcon.astro';
+import SectionContainer from "./SectionContainer.astro";
 
 interface navbarLinksProps {
   title: string;
@@ -37,8 +38,8 @@ const navbarLinks: navbarLinksProps[] = [
   }
 ]
 ---
-<nav class="flex justify-between items-center py-3 max-w-7xl mx-auto fixed w-full backdrop-blur-md 
-px-4 lg:px-28 z-50">
+<nav class="flex justify-between items-center py-3 backdrop-blur-md fixed z-50
+max-w-7xl w-full px-4 lg:px-28 mx-auto">
   <img
     class="size-8 rounded-full cursor-pointer lg:size-6" 
     src="/imagenes/General/LogoAS.webp" 

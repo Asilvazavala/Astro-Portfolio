@@ -5,19 +5,19 @@ import Button from '../components/Shared/Button.astro'
 import ButtonOutline from '../components/Shared/ButtonOutline.astro'
 ---
 
-<SectionContainer>
-  <main id="inicio" class="grid grid-cols-1 lg:grid-cols-2 pt-14 lg:pt-28 content-center w-full">
+<SectionContainer className="lg:h-screen flex justify-center items-center" >
+  <main id="inicio" class="grid grid-cols-1 lg:grid-cols-2 pt-14 content-center w-full">
     <article class="flex flex-col gap-y-4 transition order-2 lg:order-1 text-center lg:text-left z-40">
       <header class="flex flex-col dark:text-primary text-fifth transition">
         <span class="text-4xl font-bold">Hola, soy</span>
-        <Title className="text-[54px] leading-[3.5rem] lg:leading-[3rem]" title="Antonio Silva" />
+        <Title className="text-[54px] lg:text-6xl leading-[3.5rem] lg:leading-[3rem]" title="Antonio Silva" />
       </header>
       <h2 class="text-4xl font-semibold text-secondary dark:text-white transition">Desarrollador Front-end</h2>
       <p class="text-sm dark:text-gray text-grayStrong transition font-medium md:max-w-96 md:mx-auto lg:mx-0 lg:max-w-max">Profesional en el diseño y desarrollo web de alto rendimiento que genera impacto, especializado en TypeScript, React, y TailwindCSS. Me encanta resolver problemas y afrontar nuevos retos.</p>
 
       <aside class="flex gap-x-6 lg:gap-x-8 mt-2 mx-auto lg:mx-0">
         <Button className="" title="¡Háblemos!" link="tel:4561148433" />
-        <ButtonOutline className="" title="Currículum"/>
+        <ButtonOutline className="" title="Currículum" link="/src/documents/ANTONIO SILVA FRONT-END Español CV.pdf" />
       </aside>
     </article>
 

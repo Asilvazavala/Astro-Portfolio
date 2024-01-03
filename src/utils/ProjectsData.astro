@@ -1,0 +1,491 @@
+---
+interface techsProps {
+  name: string;
+  icon: string;
+  techClassName: string;
+}
+
+interface projectsProps {
+  image:  string;
+  cardColor: string;
+  imgClassname?: string;
+  title: string;
+  description: string;
+  techs: techsProps[];
+  githubLink: string;
+  liveLink: string;
+}
+
+export const projects: projectsProps[] = [
+  {
+    image: '/imagenes/Projects/Clinica-fisio.webp',
+    cardColor: 'azulCyan-azulFuerte',
+    imgClassname: 'transition duration-7000 transform hover:translate-y-[-78%]',
+    title: 'Clínica fisioterapia',
+    description: 'Creé un sistema para reservar citas en la clínica, implementé EmailJS para gestionar las notificaciones por correo, cuenta con modo oscuro/claro, un acordeón y es adaptable a celulares.',
+    techs: [
+      {
+        name: 'TypeScript',
+        icon: '/imagenes/Technologys/typescript.svg',
+        techClassName: 'bg-[#2F74C0] text-white'
+      },
+      {
+        name: 'React',
+        icon: '/imagenes/Technologys/react.svg',
+        techClassName: 'bg-[#B0ECFD] text-black'
+      },
+      {
+        name: 'Astro',
+        icon: '/imagenes/Technologys/astro.svg',
+        techClassName: 'bg-[#E54896] text-white'
+      },
+      {
+        name: 'TailwindCSS',
+        icon: '/imagenes/Technologys/tailwindcss.svg',
+        techClassName: 'bg-[#38B2AC] text-black'
+      },
+    ],
+    githubLink: 'https://github.com/Asilvazavala/agenda-fisioterapia',
+    liveLink: 'https://agenda-fisioterapia.vercel.app/'
+  },
+  {
+    image: '/imagenes/Projects/valle-de-santiago.webp',
+    cardColor: 'verdeClaro-verdeObscuro',
+    imgClassname: 'transition duration-10000 transform hover:translate-y-[-76%]',
+    title: 'Valle de Santiago',
+    description: 'Rediseñé una página creada hace más de 30 años por mi padre la cual habla sobre la bella ciudad donde vivimos, agregué librerías como Swiper o Leaflet, creé más de 40 artículos y aumenté la fluidez del sitio con Astro.',
+    techs: [
+      {
+        name: 'TypeScript',
+        icon: '/imagenes/Technologys/typescript.svg',
+        techClassName: 'bg-[#2F74C0] text-white'
+      },
+      {
+        name: 'React',
+        icon: '/imagenes/Technologys/react.svg',
+        techClassName: 'bg-[#B0ECFD] text-black'
+      },
+      {
+        name: 'Astro',
+        icon: '/imagenes/Technologys/astro.svg',
+        techClassName: 'bg-[#E54896] text-white'
+      },
+      {
+        name: 'TailwindCSS',
+        icon: '/imagenes/Technologys/tailwindcss.svg',
+        techClassName: 'bg-[#38B2AC] text-black'
+      },
+    ],
+    githubLink: 'https://github.com/Asilvazavala/Valle-de-Santiago',
+    liveLink: 'https://valledesantiago.vercel.app/'
+  },
+  {
+    image: '/imagenes/Projects/ecommerce-burger-house.webp',
+    cardColor: 'naranjaOscuro-naranja',
+    imgClassname: 'transition duration-7000 transform hover:translate-y-[-61%]',
+    title: 'E-commerce',
+    description: 'Creé un e-commerce, con pasarela de pago, filtro por categoría, búsqueda por nombre, carrusel de ofertas, almacenamiento local para guardar carrito de compra y panel de administrador para gestionar productos.',
+    techs: [
+      {
+        name: 'TypeScript',
+        icon: '/imagenes/Technologys/typescript.svg',
+        techClassName: 'bg-[#2F74C0] text-white'
+      },
+      {
+        name: 'Next.js',
+        icon: '/imagenes/Technologys/nextjs.svg',
+        techClassName: 'bg-black text-white'
+      },
+      {
+        name: 'React',
+        icon: '/imagenes/Technologys/react.svg',
+        techClassName: 'bg-[#B0ECFD] text-black',
+      },
+      {
+        name: 'TailwindCSS',
+        icon: '/imagenes/Technologys/tailwindcss.svg',
+        techClassName: 'bg-[#38B2AC] text-black'
+      },
+      {
+        name: 'Stripe',
+        icon: '/imagenes/Technologys/stripe.svg',
+        techClassName: 'bg-[#32325D] text-white'
+      },
+    ],
+    githubLink: 'https://github.com/Asilvazavala/Ecommerce-Food',
+    liveLink: 'https://as-ecommerce-food.vercel.app/'
+  },
+  {
+    image: '/imagenes/Projects/Real-estate.webp',
+    cardColor: 'verdeClaro-verdeObscuro',
+    imgClassname: 'transition duration-10000 transform hover:translate-y-[-83%]',
+    title: 'Bienes raíces',
+    description: 'Implementé un sistema para vender propiedades, con filtros por precio, ubicación o casa, habilité la biblioteca Leaflef para ver propiedades en un mapa, agregué efectos de transición con Framer Motion.',
+    techs: [
+      {
+        name: 'TypeScript',
+        icon: '/imagenes/Technologys/typescript.svg',
+        techClassName: 'bg-[#2F74C0] text-white'
+      },
+      {
+        name: 'Next.js',
+        icon: '/imagenes/Technologys/nextjs.svg',
+        techClassName: 'bg-black text-white'
+      },
+      {
+        name: 'React',
+        icon: '/imagenes/Technologys/react.svg',
+        techClassName: 'bg-[#B0ECFD] text-black',
+      },
+      {
+        name: 'TailwindCSS',
+        icon: '/imagenes/Technologys/tailwindcss.svg',
+        techClassName: 'bg-[#38B2AC] text-black'
+      },
+    ],
+    githubLink: 'https://github.com/Asilvazavala/Bienes-raices',
+    liveLink: 'https://as-bienes-raices.vercel.app/'
+  },
+  {
+    image: '/imagenes/Projects/GymAS.webp',
+    cardColor: 'amarillo-negro',
+    imgClassname: 'transition duration-10000 transform hover:translate-y-[-86%]',
+    title: 'Gimnasio club',
+    description: 'Creé una landing con integración de la API de whatsapp, sección de imágenes/galería usando grid, cálculo de masa corporal, testimonios de clientes, sección de precios de inscripción, diseño responsivo',
+    techs: [
+      {
+        name: 'JavaScript',
+        icon: '/imagenes/Technologys/javascript.svg',
+        techClassName: 'bg-[#F0DB4F] text-black'
+      },
+      {
+        name: 'React',
+        icon: '/imagenes/Technologys/react.svg',
+        techClassName: 'bg-[#B0ECFD] text-black',
+      },
+      {
+        name: 'CSSVanilla',
+        icon: '/imagenes/Technologys/css3.svg',
+        techClassName: 'bg-[#1572B6] text-white'
+      },
+    ],
+    githubLink: 'https://github.com/Asilvazavala/GYM-AS',
+    liveLink: 'https://gym-as.vercel.app'
+  },
+  {
+    image: '/imagenes/Projects/blog-barcelona.webp',
+    cardColor: 'rosa-rojo',
+    imgClassname: 'transition duration-7000 transform hover:translate-y-[-72%]',
+    title: 'Blog culemania',
+    description: 'Noticias del FC Barcelona, implementé autenticación de usuario, CRUD de comentarios con posibilidad de dar like/dislike, guardado de información en base de datos, filtrado por id, renderizado condicional.',
+    techs: [
+      {
+        name: 'JavaScript',
+        icon: '/imagenes/Technologys/javascript.svg',
+        techClassName: 'bg-[#F0DB4F] text-black'
+      },
+      {
+        name: 'React',
+        icon: '/imagenes/Technologys/react.svg',
+        techClassName: 'bg-[#B0ECFD] text-black',
+      },
+      {
+        name: 'PostgreSQL',
+        icon: '/imagenes/Technologys/postgresql.svg',
+        techClassName: 'bg-[#336791] text-white'
+      },
+      {
+        name: 'Node.js',
+        icon: '/imagenes/Technologys/nodejs.svg',
+        techClassName: 'bg-[#83CD29] text-black'
+      },
+      {
+        name: 'Auth0',
+        icon: '/imagenes/Technologys/auth0.svg',
+        techClassName: 'bg-[#EB5424] text-white'
+      },
+    ],
+    githubLink: 'https://github.com/Asilvazavala/Blog-barcelona',
+    liveLink: 'https://blog-barcelona.vercel.app/'
+  },
+  {
+    image: '/imagenes/Projects/dashboard-admin.webp',
+    cardColor: 'azul-morado',
+    imgClassname: 'transition duration-1000 transform hover:translate-y-[-6%]',
+    title: 'Panel de administrador',
+    description: 'Creé un espacio para gestionar ventas, las cuales se guardan en Prisma, las imágenes se administran con Cloudinary, hay rutas API y CRUD de productos, implementé múltiples tiendas y rutas protegidas.',
+    techs: [
+      {
+        name: 'TypeScript',
+        icon: '/imagenes/Technologys/typescript.svg',
+        techClassName: 'bg-[#2F74C0] text-white'
+      },
+      {
+        name: 'Next.js',
+        icon: '/imagenes/Technologys/nextjs.svg',
+        techClassName: 'bg-black text-white'
+      },
+      {
+        name: 'React',
+        icon: '/imagenes/Technologys/react.svg',
+        techClassName: 'bg-[#B0ECFD] text-black',
+      },
+      {
+        name: 'TailwindCSS',
+        icon: '/imagenes/Technologys/tailwindcss.svg',
+        techClassName: 'bg-[#38B2AC] text-black'
+      },
+      {
+        name: 'MySQL',
+        icon: '/imagenes/Technologys/mysql.svg',
+        techClassName: 'bg-[#0e88c0] text-black'
+      },
+    ],
+    githubLink: 'https://github.com/Asilvazavala/dashboard-admin',
+    liveLink: 'https://as-dashboard-admin.vercel.app/'
+  },
+  {
+    image: '/imagenes/Projects/shorter-link.webp',
+    cardColor: 'verde-azul',
+    imgClassname: 'transition duration-7000 transform hover:translate-y-[-63%]',
+    title: 'Acortador de links',
+    description: 'Implementé un sistema para que al introducir un enlace, se pueda acortar y copiar al portapapeles con un solo clic, los enlaces se guardan en el almacenamiento local, la información es consumida desde una API.',
+    techs: [
+      {
+        name: 'JavaScript',
+        icon: '/imagenes/Technologys/javascript.svg',
+        techClassName: 'bg-[#F0DB4F] text-black'
+      },
+      {
+        name: 'HTML',
+        icon: '/imagenes/Technologys/html5.svg',
+        techClassName: 'bg-[#E44D26] text-white'
+      },
+      {
+        name: 'TailwindCSS',
+        icon: '/imagenes/Technologys/tailwindcss.svg',
+        techClassName: 'bg-[#38B2AC] text-black'
+      },
+    ],
+    githubLink: 'https://github.com/Asilvazavala/Challenges-Frontend-Mentor/tree/main/C7-url-shortening-api-master',
+    liveLink: 'https://shorter-link-antonio-silva.netlify.app'
+  },
+  {
+    image: '/imagenes/Projects/countries-wiki.webp',
+    cardColor: 'cyan-azul',
+    imgClassname: 'transition duration-7000 transform hover:translate-y-[-74%]',
+    title: 'Wikipedia de países',
+    description: 'Diseñé una página para consultar la información de más de 100 países de todo el mundo, con filtro y búsqueda por nombre a tráves de un contexto creado en React, la información es consumida de una API.',
+    techs: [
+      {
+        name: 'TypeScript',
+        icon: '/imagenes/Technologys/typescript.svg',
+        techClassName: 'bg-[#2F74C0] text-white'
+      },
+      {
+        name: 'Next.js',
+        icon: '/imagenes/Technologys/nextjs.svg',
+        techClassName: 'bg-black text-white'
+      },
+      {
+        name: 'React',
+        icon: '/imagenes/Technologys/react.svg',
+        techClassName: 'bg-[#B0ECFD] text-black',
+      },
+      {
+        name: 'TailwindCSS',
+        icon: '/imagenes/Technologys/tailwindcss.svg',
+        techClassName: 'bg-[#38B2AC] text-black'
+      },
+    ],
+    githubLink: 'https://github.com/Asilvazavala/Challenges-Frontend-Mentor/tree/main/C8-rest-countries-api',
+    liveLink: 'https://countries-wiki-as.vercel.app/'
+  },
+  {
+    image: '/imagenes/Projects/MySeam.webp',
+    cardColor: 'naranjaOscuro-naranja',
+    imgClassname: 'transition duration-10000 transform hover:translate-y-[-78%]',
+    title: 'Marketplace My seam',
+    description: 'Venta de ropa, cuenta con autenticación de usuario, puedes ser comprador y/o vendedor, pasarela de pago, filtros combinados, búsqueda por nombre, carrito de compras con almacenamiento local, panel de administrador, reseñas.',
+    techs: [
+      {
+        name: 'JavaScript',
+        icon: '/imagenes/Technologys/javascript.svg',
+        techClassName: 'bg-[#F0DB4F] text-black'
+      },
+      {
+        name: 'React',
+        icon: '/imagenes/Technologys/react.svg',
+        techClassName: 'bg-[#B0ECFD] text-black',
+      },
+      {
+        name: 'PostgreSQL',
+        icon: '/imagenes/Technologys/postgresql.svg',
+        techClassName: 'bg-[#336791] text-white'
+      },
+      {
+        name: 'Node.js',
+        icon: '/imagenes/Technologys/nodejs.svg',
+        techClassName: 'bg-[#83CD29] text-black'
+      },
+      {
+        name: 'MercadoPago',
+        icon: '/imagenes/Technologys/mercado-pago.svg',
+        techClassName: 'bg-[#09B6F6] text-black'
+      },
+      {
+        name: 'Chakra',
+        icon: '/imagenes/Technologys/chakraui.svg',
+        techClassName: 'bg-[#31C1B5] text-black'
+      },
+    ],
+    githubLink: 'https://github.com/Asilvazavala/My-Seam',
+    liveLink: 'https://my-seam-chi.vercel.app/'
+  },
+  {
+    image: '/imagenes/Projects/PokemonWorld.webp',
+    cardColor: 'rojo-rojoFuerte',
+    imgClassname: 'transition duration-10000 transform hover:translate-y-[-78%]',
+    title: 'Mundo pokemon',
+    description: 'Diseñé un sistema para buscar, filtrar, consultar, modificar, eliminar y crear pokemon, los cuales son consumidos a través de una API externa y almacenados en una base de datos, cuenta con diseño responsivo.',
+    techs: [
+      {
+        name: 'JavaScript',
+        icon: '/imagenes/Technologys/javascript.svg',
+        techClassName: 'bg-[#F0DB4F] text-black'
+      },
+      {
+        name: 'React',
+        icon: '/imagenes/Technologys/react.svg',
+        techClassName: 'bg-[#B0ECFD] text-black',
+      },
+      {
+        name: 'Redux',
+        icon: '/imagenes/Technologys/redux.svg',
+        techClassName: 'bg-[#764ABC] text-white'
+      },
+      {
+        name: 'PostgreSQL',
+        icon: '/imagenes/Technologys/postgresql.svg',
+        techClassName: 'bg-[#336791] text-white'
+      },
+      {
+        name: 'Node.js',
+        icon: '/imagenes/Technologys/nodejs.svg',
+        techClassName: 'bg-[#83CD29] text-black'
+      },
+    ],
+    githubLink: 'https://github.com/Asilvazavala/deploy-pokemon',
+    liveLink: 'https://pokemon-world-antonio-silva.vercel.app'
+  },
+  {
+    image: '/imagenes/Projects/car-Rent.webp',
+    cardColor: 'cyan-azul',
+    imgClassname: 'transition duration-10000 transform hover:translate-y-[-74%]',
+    title: 'Renta de carros',
+    description: 'Creé un sistema de renta de carros, cuenta con búsqueda por fabricante o modelo, renderizado condicional por año o tipo de gasolina, modal con detalles del carro, diseño responsivo.',
+    techs: [
+      {
+        name: 'TypeScript',
+        icon: '/imagenes/Technologys/typescript.svg',
+        techClassName: 'bg-[#2F74C0] text-white'
+      },
+      {
+        name: 'React',
+        icon: '/imagenes/Technologys/react.svg',
+        techClassName: 'bg-[#B0ECFD] text-black'
+      },
+      {
+        name: 'Next.js',
+        icon: '/imagenes/Technologys/nextjs.svg',
+        techClassName: 'bg-black text-white'
+      },
+      {
+        name: 'TailwindCSS',
+        icon: '/imagenes/Technologys/tailwindcss.svg',
+        techClassName: 'bg-[#38B2AC] text-black'
+      },
+    ],
+    githubLink: 'https://github.com/Asilvazavala/cars-TypeScript',
+    liveLink: 'https://cars-as.vercel.app/'
+  },
+  {
+    image: '/imagenes/Projects/easy-bank.webp',
+    cardColor: 'verde-azulClaro',
+    imgClassname: 'transition duration-10000 transform hover:translate-y-[-69%]',
+    title: 'Landing de banco',
+    description: 'Diseñé esta landing para mostrar los beneficios y ofertas de un banco, cuenta con diseño responsivo, el cual es un desafío de la página Frontend Mentor.',
+    techs: [
+      {
+        name: 'JavaScript',
+        icon: '/imagenes/Technologys/javascript.svg',
+        techClassName: 'bg-[#F0DB4F] text-black'
+      },
+      {
+        name: 'Astro',
+        icon: '/imagenes/Technologys/astro.svg',
+        techClassName: 'bg-[#E54896] text-white'
+      },
+      {
+        name: 'TailwindCSS',
+        icon: '/imagenes/Technologys/tailwindcss.svg',
+        techClassName: 'bg-[#38B2AC] text-black'
+      },
+    ],
+    githubLink: 'https://github.com/Asilvazavala/Challenges-Frontend-Mentor/tree/main/C11-bank-landing-page',
+    liveLink: 'https://easy-bank-as.vercel.app'
+  },
+  {
+    image: '/imagenes/Projects/age-calculator.webp',
+    cardColor: 'lila-morado',
+    imgClassname: 'h-full',
+    title: 'Calculadora de edad',
+    description: 'Descubre la cantidad de años, meses y días que han pasado desde cualquier fecha, cuenta con validaciones, desafío de la página Frontend Mentor.',
+    techs: [
+      {
+        name: 'JavaScript',
+        icon: '/imagenes/Technologys/javascript.svg',
+        techClassName: 'bg-[#F0DB4F] text-black'
+      },
+      {
+        name: 'HTML',
+        icon: '/imagenes/Technologys/html5.svg',
+        techClassName: 'bg-[#E44D26] text-white'
+      },
+      {
+        name: 'TailwindCSS',
+        icon: '/imagenes/Technologys/tailwindcss.svg',
+        techClassName: 'bg-[#38B2AC] text-black'
+      },
+    ],
+    githubLink: 'https://github.com/Asilvazavala/Challenges-Frontend-Mentor/tree/main/C9-age-calculator-app-main',
+    liveLink: 'https://age-calc-antonio-silva.netlify.app/'
+  },
+  {
+    image: '/imagenes/Projects/3EnRaya.webp',
+    cardColor: 'yellow-pink',
+    imgClassname: 'h-full',
+    title: '3 en raya',
+    description: 'Juega este clásico juego contra una persona o contra la computadora, tiene almacenamiento local para guardar el juego actual al recargar la página.',
+    techs: [
+      {
+        name: 'JavaScript',
+        icon: '/imagenes/Technologys/javascript.svg',
+        techClassName: 'bg-[#F0DB4F] text-black'
+      },
+      {
+        name: 'React',
+        icon: '/imagenes/Technologys/react.svg',
+        techClassName: 'bg-[#B0ECFD] text-black'
+      },
+      {
+        name: 'TailwindCSS',
+        icon: '/imagenes/Technologys/tailwindcss.svg',
+        techClassName: 'bg-[#38B2AC] text-black'
+      },
+    ],
+    githubLink: 'https://github.com/Asilvazavala/Juego-3-en-raya',
+    liveLink: 'https://juego-3-en-raya.vercel.app/'
+  },
+];
+---

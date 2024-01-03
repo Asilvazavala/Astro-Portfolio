@@ -17,11 +17,16 @@ export default {
 				'0%': { 'transform': 'scale(1) rotate(360deg)'},
 				'100%': { 'transform': 'rotate(360deg) scale(0)'}
 			},
+			scaleUp: {
+				'0%': { 'transform': 'scale(0.5)'},
+				'100%': { 'transform': 'scale(1)'}
+			}
 		},
 		animation: {
 			morph: 'morph 8s ease-in-out 1s infinite normal none running',
 			zoomIn: 'zoomIn .5s ease-in-out .5s',
 			zoomOut: 'zoomOut .5s ease-in-out .5s',
+			scaleUp: 'scaleUp 6s ease-out infinite both',
 		},
 		extend: {
 			colors: {
@@ -32,6 +37,10 @@ export default {
 				fifth: '#8C2DE0',
 				gray: '#94A3B8',
 				grayStrong: '#454545ad'
+			},
+			transitionDuration: {
+				'7000' : '7000ms',
+				'10000' : '10000ms',
 			}
 		},
 	},

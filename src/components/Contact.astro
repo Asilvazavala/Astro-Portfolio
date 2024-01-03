@@ -1,0 +1,46 @@
+---
+import ContactIcon from "../icons/ContactIcon.astro";
+import GithubIcon from "../icons/GithubIcon.astro";
+import LinkedinIcon from "../icons/LinkedinIcon.astro";
+import WhatsappIcon from "../icons/WhatsappIcon.astro";
+import SectionContainer from "./SectionContainer.astro";
+import Title from "./Shared/Title.astro";
+import '@fontsource/rubik-dirt';
+---
+
+<SectionContainer className="pb-20">
+  <div id="contacto" class="flex justify-center lg:justify-start items-center gap-x-2 mb-8 pt-12 mt-16 lg:mt-28">
+    <ContactIcon class="dark:text-grayStrong text-gray size-9 lg:size-11" />
+    <Title className="text-4xl lg:text-5xl" title="Contacto" />
+  </div>
+
+  <main class="grid grid-cols-1 lg:grid-cols-3 px-8 py-8 lg:py-16 rounded-xl dark:bg-primary dark:text-secondary 
+  gap-10 shadow-md shadow-white border-2 border-white bg-fifth text-white">
+    <article class="text-4xl lg:text-5xl col-span-1 flex justify-center items-center">
+      <h2 class="animate-scaleUp">¡Hablémos!</h2>
+    </article>
+
+    <article class="col-span-1 flex flex-col justify-center items-center">
+      <p class="text-center font-light">Contáctame para empezar a trabajar juntos</p>
+      <a 
+        class="underline font-medium lg:hover:brightness-200 transition"
+        href="mailto:asilvazavala@gmail.com" 
+        target="_blank" 
+        rel="noopener">
+        asilvazavala@gmail.com
+      </a>
+    </article>
+
+    <article class="col-span-1 flex gap-x-2 justify-center items-center dark:text-secondary">
+      <a class="lg:hover:scale-125 transform transition" target="_blank" rel="noopener" href="https://github.com/Asilvazavala"><GithubIcon class="size-12" /></a>
+      <a class="lg:hover:scale-125 transform transition" target="_blank" rel="noopener" href="https://www.linkedin.com/in/antonio-silva-developer/"><LinkedinIcon class="size-12" /></a>
+      <a class="lg:hover:scale-125 transform transition" target="_blank" rel="noopener" href="tel:4561148433"><WhatsappIcon class="size-12" /></a>
+    </article>
+  </main>
+</SectionContainer>
+
+<style>
+  h2 {
+    font-family: 'Rubik Dirt', sans-serif;
+  }
+</style>

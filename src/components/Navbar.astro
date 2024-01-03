@@ -2,11 +2,6 @@
 import ToggleTheme from "../helpers/ToggleTheme.astro";
 import XIcon from '../icons/XIcon.astro';
 import MenuIcon from '../icons/MenuIcon.astro';
-import HomeIcon from '../icons/HomeIcon.astro';
-import ExperienceIcon from '../icons/ExperienceIcon.astro';
-import ProjectsIcon from '../icons/ProjectsIcon.astro';
-import AboutIcon from '../icons/AboutIcon.astro';
-import ContactIcon from '../icons/ContactIcon.astro';
 
 interface navbarLinksProps {
   title: string;
@@ -18,27 +13,27 @@ const navbarLinks: navbarLinksProps[] = [
   {
     title: 'Inicio',
     link: '#inicio',
-    icon: 'HomeIcon'
+    icon: '/imagenes/Navbar/HomeIcon.svg'
   },
   {
     title: 'Experiencia',
     link: '#experiencia',
-    icon: 'ExperienceIcon'
+    icon: '/imagenes/Navbar/ExperienceIcon.svg'
   },
   {
     title: 'Proyectos',
     link: '#proyectos',
-    icon: 'ProjectsIcon'
+    icon: '/imagenes/Navbar/ProjectsIcon.svg'
   },
   {
     title: 'Sobre mí',
     link: '#sobreMi',
-    icon: 'AboutIcon'
+    icon: '/imagenes/Navbar/AboutIcon.svg'
   },
   {
     title: 'Contacto',
     link: '#contacto',
-    icon: 'ContactIcon'
+    icon: '/imagenes/Navbar/ContactIcon.svg'
   }
 ]
 ---
@@ -69,27 +64,19 @@ px-4 lg:px-28 z-50">
       lg:border-none lg:pb-0 lg:justify-center lg:w-auto">
         <a class="flex justify-between items-center w-full" href={link}>
           {title}
-          <span class="lg:hidden">
-            {icon === 'HomeIcon' 
-              ? <HomeIcon class="size-8" /> 
-              : icon === 'ExperienceIcon'
-                ? <ExperienceIcon class="size-8" />
-                : icon === 'ProjectsIcon'
-                  ? <ProjectsIcon class="size-8" />
-                  : icon === 'AboutIcon'
-                    ? <AboutIcon class="size-8" />
-                    : icon === 'ContactIcon'
-                      ? <ContactIcon class="size-8" />
-                      : null
-            }
-          </span>
+          <img 
+            src={icon} 
+            alt={title}
+            title={title}
+            class="size-8 lg:hidden iconNavbar"
+          />
         </a>
       </li>
     ))}
   </ul>
 
-  <aside id="toggleTheme" class="absolute max-[1024px]:top-4 scale-0 transition duration-700
-  max-[1024px]:bottom-0 lg:relative lg:scale-100 lg:flex lg:justify-center lg:items-center">
+  <aside class="absolute max-[1024px]:top-4 transition duration-700
+  max-[1024px]:bottom-0 max-[1024px]:right-16 lg:relative lg:flex lg:justify-center lg:items-center">
     <ToggleTheme />
   </aside>
 </nav>
@@ -98,14 +85,12 @@ px-4 lg:px-28 z-50">
   const menuIcon = document.getElementById('menuIcon');
   const closeMenuIcon = document.getElementById('closeMenuIcon');
   const menuMobile = document.getElementById('menuMobile');
-  const toggleTheme = document.getElementById('toggleTheme');
   const menuItems = document.querySelectorAll('li');
 
   const toggleItems = () => {
     menuIcon?.classList.toggle('scale-0');
     closeMenuIcon?.classList.toggle('scale-0');
     menuMobile?.classList.toggle('scale-0');
-    toggleTheme?.classList.toggle('scale-0');
   }
 
   menuIcon?.addEventListener('click', () => {

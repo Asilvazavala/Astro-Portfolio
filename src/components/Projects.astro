@@ -37,7 +37,7 @@ import { projects } from '../utils/ProjectsData.astro';
           <footer class="flex justify-between items-center px-3">
             <article class="flex gap-x-[2px] lg:gap-x-1 absolute bottom-2">
               {techs.map(({ name, icon, techClassName }) => (
-                <div class="flex flex-col justify-center items-center group">
+                <div class="flex flex-col justify-center items-center lg:group">
                   <img 
                     loading="lazy"
                     decoding="async"
@@ -45,7 +45,7 @@ import { projects } from '../utils/ProjectsData.astro';
                     alt={name}
                     class="size-6 lg:size-7"
                   />
-                  <span class={`absolute -bottom-8 text-sm hidden group-hover:block 
+                  <span class={`absolute -bottom-8 text-sm hidden lg:group-hover:block 
                     ${techClassName} px-2 py-1 rounded-full font-medium`}>
                     {name}
                   </span>
@@ -55,7 +55,7 @@ import { projects } from '../utils/ProjectsData.astro';
 
             <article class="flex items-center gap-x-1 lg:gap-x-2 absolute bottom-1 right-2">
               <a 
-                class="lg:hover:text-secondary transition group flex flex-col justify-center items-center" 
+                class="lg:hover:text-secondary transition lg:group flex flex-col justify-center items-center" 
                 target="_blank" 
                 rel="noopener" 
                 href={githubLink}>
@@ -66,7 +66,7 @@ import { projects } from '../utils/ProjectsData.astro';
                 </span>
               </a>
               <a 
-                class="lg:hover:text-secondary transition group flex flex-col justify-center items-center" 
+                class="lg:hover:text-secondary transition lg:group flex flex-col justify-center items-center" 
                 target="_blank" 
                 rel="noopener" 
                 href={liveLink}>

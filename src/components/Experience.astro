@@ -101,17 +101,17 @@ const experiences: experiencesProps[] = [
 
 <SectionContainer>
   <div id="experiencia" class="flex justify-center lg:justify-start items-center gap-x-2 mb-8 pt-12 mt-20">
-    <div><ExperienceIcon class="dark:text-grayStrong text-gray size-9 lg:size-11" /></div>
+    <div><ExperienceIcon class="dark:text-gray text-grayStrong size-9 lg:size-11" /></div>
     <Title className="text-4xl lg:text-5xl" title="Experiencia" />
   </div>
   <header id="experienciaContenedor" class="flex min-h-[380px] overflow-x-auto overflow-y-hidden">    
     {experiences.map(({ year, icon, title, description, link }) => (
       <article class="flex flex-col max-h-[50px] experience-article">
         <div class="flex flex-col justify-center items-center relative">
-          <span class="dark:text-grayStrong text-gray absolute top-0 -left-4 experience-year">{year}</span>
+          <span class="dark:text-gray text-grayStrong absolute top-0 -left-4 experience-year">{year}</span>
           <div class="flex mt-8 relative">
             <aside class="flex h-12 w-[2.5px] bg-gray mr-28 vertical-line
-            dark:bg-grayStrong dark:text-grayStrong text-gray text-sm">
+            dark:bg-grayStrong text-grayStrong text-sm">
               <div class="absolute -top-1 left-0 flex justify-start items-start gap-x-2 separator">
                 <span class="opacity-0">|</span>
                 <span>|</span>
@@ -126,7 +126,7 @@ const experiences: experiencesProps[] = [
               </div>
             </aside>
           </div>
-          <div class="dark:text-grayStrong text-gray absolute -bottom-9 -left-[15px] experience-icon mt-2">
+          <div class="dark:text-gray text-grayStrong absolute -bottom-9 -left-[15px] experience-icon mt-2">
             <img 
               src={icon} 
               alt={title}
@@ -136,7 +136,7 @@ const experiences: experiencesProps[] = [
           </div>
           <footer class="absolute flex justify-center items-center flex-col mt-[390px] min-w-[340px]">
             <h2 class="relative dark:text-primary text-fifth font-medium text-xl experience-title hidden">{title}</h2>
-            <p class="text-grayStrong leading-[1.5rem] experience-description hidden text-sm">{description}</p>
+            <p class="dark:text-gray text-grayStrong leading-[1.5rem] experience-description hidden text-sm">{description}</p>
             {link && 
             <a href={link} target="_blank" rel="noopener" 
             class="hidden experience-button text-purple-700 lg:hover:text-white 

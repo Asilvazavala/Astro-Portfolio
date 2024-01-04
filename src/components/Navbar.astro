@@ -2,7 +2,6 @@
 import ToggleTheme from "../helpers/ToggleTheme.astro";
 import XIcon from '../icons/XIcon.astro';
 import MenuIcon from '../icons/MenuIcon.astro';
-import SectionContainer from "./SectionContainer.astro";
 
 interface navbarLinksProps {
   title: string;
@@ -60,7 +59,7 @@ max-w-7xl w-full px-4 lg:px-28 mx-auto">
     max-[1024px]:fixed max-[1024px]:text-4xl max-[1024px]:left-0 max-[1024px]:top-0
     lg:h-auto lg:w-auto lg:flex-row lg:px-0 lg:scale-100 lg:bg-none lg:dark:bg-none">
     {navbarLinks.map(({ title, link, icon }) => (
-      <li class="dark:lg:hover:text-primary lg:hover:text-purple-700 transition w-[92%]
+      <li class="dark:lg:hover:text-primary lg:hover:text-purple-700 transition w-full
       border-b dark:border-gray border-grayStrong pb-2 flex justify-between items-center
       lg:border-none lg:pb-0 lg:justify-center lg:w-auto">
         <a class="flex justify-between items-center w-full" href={link}>

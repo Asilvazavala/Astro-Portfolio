@@ -19,17 +19,17 @@ import { projects } from '../utils/ProjectsData.astro';
     <main class="swiper-wrapper">
       {projects.map(({ image, cardColor, imgClassname, title, description, techs, githubLink, liveLink }) => (
         <article class={`swiper-slide rounded-xl ${cardColor} flex flex-col relative`}>
-          <figure class="w-full h-[160px] lg:h-[190px] overflow-hidden rounded-t-xl">
+          <figure class="w-full h-[190px] overflow-hidden rounded-t-xl">
             <img 
               loading="lazy"
               decoding="async"
               src={image} 
               alt={title}
-              class={`w-full h-auto object-cover rounded-t-xl mb-2 ${imgClassname}`}
+              class={`w-full h-auto object-cover rounded-t-xl ease-linear ${imgClassname}`}
             />
           </figure>
 
-          <header class="px-3 flex flex-col">
+          <header class="px-3 flex flex-col mt-2">
             <h2 class="text-white text-lg font-extrabold">{title}</h2>
             <p class="text-zinc-300 text-sm">{description}</p>
           </header>
@@ -227,7 +227,7 @@ document.addEventListener('DOMContentLoaded', function () {
   @media (width < 1024px) {
     .swiper-slide {
     width: 250px;
-    height: 400px;
+    height: 430px;
   }
 }
 </style>

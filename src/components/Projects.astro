@@ -150,7 +150,7 @@ document.addEventListener('DOMContentLoaded', function () {
   .swiper-slide {
     background-position: center;
     background-size: cover;
-    width: 340px;
+    width: 33%;
     height: 380px;
     opacity: .5;
   }
@@ -226,8 +226,20 @@ document.addEventListener('DOMContentLoaded', function () {
 
   @media (width < 1024px) {
     .swiper-slide {
-    width: 250px;
+    width: 40%;
     height: 430px;
+  }
+}
+
+  @media (width < 700px) {
+    .swiper-slide {
+    width: 60%;
+  }
+}
+
+  @media (width < 450px) {
+    .swiper-slide {
+    width: 80%;
   }
 }
 </style>

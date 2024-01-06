@@ -35,7 +35,7 @@ import { projects } from '../utils/ProjectsData.astro';
           </header>
 
           <footer class="flex items-center px-3">
-            <article class="flex gap-x-[2px] lg:gap-x-1 absolute bottom-2">
+            <article class="flex gap-x-[2px] lg:gap-x-1 absolute bottom-2 left-2">
               {techs.map(({ name, icon, techClassName }) => (
                 <div class="flex flex-col items-center group">
                   <img 
@@ -153,6 +153,7 @@ document.addEventListener('DOMContentLoaded', function () {
     width: 33%;
     height: 380px;
     opacity: .5;
+    position: relative;
   }
 
   .swiper-slide-active {

@@ -35,15 +35,15 @@ import { projects } from '../utils/ProjectsData.astro';
           </header>
 
           <footer class="flex items-center px-3">
-            <article class="flex items-center gap-x-1 lg:gap-x-2 absolute bottom-2 left-2 w-[60%]">
+            <article class="flex items-center gap-x-1 lg:gap-x-2 absolute bottom-2 left-2">
               {techs.map(({ name, icon, techClassName }) => (
-                <div class="flex flex-col group w-fit">
+                <div class="flex items-center flex-col group">
                   <img 
                     loading="lazy"
                     decoding="async"
                     src={icon} 
                     alt={name}
-                    class="size-6 lg:size-7 w-fit"
+                    class="size-6 lg:size-7 max-w-[24px] lg:max-w-[28px]"
                   />
                   <span class={`absolute -bottom-8 text-sm hidden group-hover:block 
                     ${techClassName} px-2 py-1 rounded-full font-medium`}>

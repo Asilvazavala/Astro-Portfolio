@@ -2,40 +2,7 @@
 import ToggleTheme from "../helpers/ToggleTheme.astro";
 import XIcon from '../icons/XIcon.astro';
 import MenuIcon from '../icons/MenuIcon.astro';
-
-interface navbarLinksProps {
-  title: string;
-  link: string;
-  icon: string;
-}
-
-const navbarLinks: navbarLinksProps[] = [
-  {
-    title: 'Inicio',
-    link: '#inicio',
-    icon: '/imagenes/Navbar/HomeIcon.svg'
-  },
-  {
-    title: 'Experiencia',
-    link: '#experiencia',
-    icon: '/imagenes/Navbar/ExperienceIcon.svg'
-  },
-  {
-    title: 'Proyectos',
-    link: '#proyectos',
-    icon: '/imagenes/Navbar/ProjectsIcon.svg'
-  },
-  {
-    title: 'Sobre mí',
-    link: '#sobreMi',
-    icon: '/imagenes/Navbar/AboutIcon.svg'
-  },
-  {
-    title: 'Contacto',
-    link: '#contacto',
-    icon: '/imagenes/Navbar/ContactIcon.svg'
-  }
-]
+import { navbarLinks } from '../utils/NavbarData.astro';
 ---
 <nav class="flex justify-between items-center py-3 backdrop-blur-md fixed z-50
 max-w-7xl w-full px-4 lg:px-28 mx-auto">

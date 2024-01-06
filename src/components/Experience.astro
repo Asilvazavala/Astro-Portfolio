@@ -1,102 +1,21 @@
 ---
 import SectionContainer from "./SectionContainer.astro";
-import ExperienceIcon from '../icons/ExperienceIcon.astro';
 import Title from "./Shared/Title.astro";
+import { experiences } from '../utils/ExperiencesData.astro';
 
-interface experiencesProps {
-  year?:  number ;
-  icon: string;
-  title: string;
-  description: string;
-  link?: string;
-}
-
-const experiences: experiencesProps[] = [
-  {
-    year: 2024,
-    icon: '/imagenes/Experience/AngularIcon.svg',
-    title: 'Hoy',
-    description: 'Actualmente aprendiendo la nueva versión de Angular 17 realizando proyectos.',
-  },
-  {
-    icon: '/imagenes/Experience/StatisticsIcon.svg',
-    title: 'Página',
-    description: 'Rediseñé con Astro una página creada hace más de 30 años sobre mi ciudad Valle de Santiago.',
-    link: 'https://valledesantiago.vercel.app/'
-  },
-  {
-    icon: '/imagenes/Experience/ClinicaIcon.svg',
-    title: 'Página',
-    description: 'Creé una página con Astro para registrar citas y dar a conocer una clínica de fisíoterapia.',
-    link: 'https://agenda-fisioterapia.vercel.app/'
-  },
-  {
-    year: 2023,
-    icon: '/imagenes/Experience/LanguageIcon.svg',
-    title: 'Aprendiendo tecnologías',
-    description: 'Practicando y aprendiendo Astro haciendo proyectos y mejorando mi conversación en inglés.',
-  },
-  {
-    icon: '/imagenes/Experience/BuildingsIcon.svg',
-    title: 'Proyecto',
-    description: 'Creé un proyecto con Next.js sobre una inmobiliaria aprendiendo nuevas librerías como Leaflet o Framer Motion.',
-    link: 'https://as-bienes-raices.vercel.app/'
-  },
-  {
-    icon: '/imagenes/Experience/TailwindIcon.svg',
-    title: 'Desafíos',
-    description: 'Terminé más de 10 desafíos de la página Frontend Mentor aprendiendo nuevas tecnologías como Tailwind o Next.js.',
-    link: 'https://www.frontendmentor.io/profile/Asilvazavala'
-  },
-  {
-    icon: '/imagenes/Experience/ShoppingCartIcon.svg',
-    title: 'Proyecto',
-    description: 'Creé un e-commerce aprendiendo nuevas tecnologías como Clerk, MySQL y Stripe, creando un panel de administrador para gestionar las ventas.',
-    link: 'https://as-ecommerce-food.vercel.app/'
-  },
-  {
-    icon: '/imagenes/Experience/ExperienceIcon.svg',
-    title: 'Bootcamp',
-    description: 'Entré al bootcampo de Henry, realizando varios proyectos full-stack de forma individual y en equipo.',
-    link: 'https://www.talent.soyhenry.com/candidate/11914'
-  },
-  { 
-    year: 2022,
-    icon: '/imagenes/Experience/TypeScriptIcon.svg',
-    title: 'Aprendiendo tecnologías',
-    description: 'Practicando y aprendiendo TypeScript, Next.js, Tailwind y PostgreSQL creando diversos proyectos.',
-  },
-  {
-    icon: '/imagenes/Experience/GymIcon.svg',
-    title: 'Proyecto',
-    description: 'Creé una landing para un gimnasio perfeccionando mi HTML, CSS y JavaScript.',
-    link: 'https://gym-as.vercel.app/'
-  },
-  {
-    icon: '/imagenes/Experience/BallSoccerIcon.svg',
-    title: 'Proyecto',
-    description: 'Creé un blog aprendiendo tecnologías como Auth0 y Express, enfocado en noticias sobre mi equipo favorito, el FC Barcelona.',
-    link: 'https://blog-barcelona.vercel.app/'
-  },
-  {
-    year: 2021,
-    icon: '/imagenes/Experience/ReactIcon.svg',
-    title: 'Aprendiendo tecnologías',
-    description: 'Practicando y aprendiendo JavaScript, React, Redux y Node.js creando diversos proyectos.',
-  },
-  {
-    year: 2020,
-    icon: '/imagenes/Experience/PHPIcon.svg',
-    title: 'Primer proyecto',
-    description: 'Creación de una página interna en PHP para gestionar la base de datos de beneficiarios de un programa gubernamental.'
-  },
-  {
-    year: 2015,
-    icon: '/imagenes/Experience/ExperienceIcon.svg',
-    title: 'Primer trabajo',
-    description: 'Conseguí mi primer trabajo, en el gobierno como técnico, realizando mantenimiento de hardware y software en PC e impresoras.'
-  },
-];
+import ExperienceIcon from '../icons/ExperienceIcon.astro';
+import AngularIcon from '../icons/AngularIcon.astro';
+import BallSoccerIcon from '../icons/BallSoccerIcon.astro';
+import BuildingsIcon from '../icons/BuildingsIcon.astro';
+import ClinicaIcon from '../icons/ClinicaIcon.astro';
+import GymIcon from '../icons/GymIcon.astro';
+import LanguageIcon from '../icons/LanguageIcon.astro';
+import PHPIcon from '../icons/PHPIcon.astro';
+import ReactIcon from '../icons/ReactIcon.astro';
+import ShoppingCartIcon from '../icons/ShoppingCartIcon.astro';
+import StatisticsIcon from '../icons/StatisticsIcon.astro';
+import TailwindIcon from '../icons/TailwindIcon.astro';
+import TypeScriptIcon from '../icons/TypeScriptIcon.astro';
 ---
 
 <SectionContainer>
@@ -126,13 +45,35 @@ const experiences: experiencesProps[] = [
               </div>
             </aside>
           </div>
-          <div class="dark:text-gray text-grayStrong absolute -bottom-9 -left-[15px] experience-icon mt-2">
-            <img 
-              src={icon} 
-              alt={title}
-              title={title}
-              class="size-8"
-            />
+          <div class="dark:text-grayStrong text-gray absolute -bottom-9 -left-[12px] experience-icon mt-2">
+            {icon === 'AngularIcon'
+              ? <AngularIcon />
+              : icon === 'BallSoccerIcon'
+                ? <BallSoccerIcon />
+                : icon === 'BuildingsIcon'
+                  ? <BuildingsIcon />
+                  : icon === 'ClinicaIcon'
+                    ? <ClinicaIcon />
+                    : icon === 'GymIcon'
+                      ? <GymIcon />
+                      : icon === 'LanguageIcon'
+                        ? <LanguageIcon />
+                        : icon === 'PHPIcon'
+                          ? <PHPIcon />
+                          : icon === 'ReactIcon'
+                            ? <ReactIcon />
+                            : icon === 'ShoppingCartIcon'
+                              ? <ShoppingCartIcon />
+                              : icon === 'StatisticsIcon'
+                                ? <StatisticsIcon />
+                                : icon === 'TailwindIcon'
+                                  ? <TailwindIcon />
+                                  : icon === 'TypeScriptIcon'
+                                    ? <TypeScriptIcon />
+                                    : icon === 'ExperienceIcon'
+                                      ? <ExperienceIcon />
+                                      : icon === null
+            }
           </div>
           <footer class="absolute flex justify-center items-center flex-col mt-[390px] min-w-[340px]">
             <h2 class="relative dark:text-primary text-fifth font-medium text-xl experience-title hidden">{title}</h2>
@@ -210,7 +151,7 @@ const experiences: experiencesProps[] = [
   }
 
   .experience-article:first-child .experience-icon {
-    left: -4px;
+    left: 0px;
   }
 
   .experience-article:first-child .separator,

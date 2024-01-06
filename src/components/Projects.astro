@@ -224,20 +224,19 @@ document.addEventListener('DOMContentLoaded', function () {
     box-shadow: 0 0 15px rgba(255, 206, 0, 1), 0 0 15px rgba(184, 40, 122, 1);
   }
 
-  @media (width < 1024px) {
+  @media screen and (max-width: 1024px) {
     .swiper-slide {
-    width: 40%;
     height: 430px;
   }
 }
 
-  @media (width < 700px) {
+@media screen and (max-width: 700px) {  
     .swiper-slide {
     width: 60%;
   }
 }
 
-  @media (width < 450px) {
+  @media screen and (max-width: 450px) {  
     .swiper-slide {
     width: 80%;
   }

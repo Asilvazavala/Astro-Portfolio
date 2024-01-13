@@ -4,49 +4,51 @@ import XIcon from '../icons/XIcon.astro';
 import MenuIcon from '../icons/MenuIcon.astro';
 import { navbarLinks } from '../utils/NavbarData.astro';
 ---
-<nav class="flex justify-between items-center py-3 backdrop-blur-md fixed z-50
-max-w-7xl w-full px-4 lg:px-28 mx-auto">
-  <img
-    class="size-8 rounded-full cursor-pointer lg:size-6" 
-    src="/imagenes/General/LogoAS.webp" 
-    alt="Logo"
-    title="Logo"
-  />
+<div class="lg:flex justify-center items-center lg:py-6">
+  <nav class="flex justify-between items-center py-3 backdrop-blur-md fixed z-50
+  max-w-7xl w-full px-4 lg:px-28 mx-auto">
+    <img
+      class="size-8 rounded-full cursor-pointer lg:size-6" 
+      src="/imagenes/General/LogoAS.webp" 
+      alt="Logo"
+      title="Logo"
+    />
 
-  <div class="text-grayStrong dark:text-gray lg:hidden">
-    <MenuIcon id="menuIcon" class="size-8 cursor-pointer transition duration-700" />
-    <XIcon id="closeMenuIcon" class="size-8 absolute top-3 right-4 scale-0 z-[9999] transition duration-700" />
-  </div>
+    <div class="text-grayStrong dark:text-gray lg:hidden">
+      <MenuIcon id="menuIcon" class="size-8 cursor-pointer transition duration-700" />
+      <XIcon id="closeMenuIcon" class="size-8 absolute top-3 right-4 scale-0 z-[9999] transition duration-700" />
+    </div>
 
-  <ul 
-    id="menuMobile" 
-    class="h-screen w-screen text-grayStrong dark:text-gray px-4 transition duration-700
-    scale-0 flex flex-col items-start justify-center gap-y-8 gap-x-12 
-    dark:bg-gradient-to-r dark:from-secondary/95 dark:to-third bg-gradient-to-r from-white/95 to-fourth 
-    max-[1024px]:fixed max-[1024px]:text-4xl max-[1024px]:left-0 max-[1024px]:top-0
-    lg:h-auto lg:w-auto lg:flex-row lg:px-0 lg:scale-100 lg:bg-none lg:dark:bg-none">
-    {navbarLinks.map(({ title, link, icon }) => (
-      <li class="dark:lg:hover:text-primary lg:hover:text-purple-700 transition w-full
-      border-b dark:border-gray border-grayStrong pb-2 flex justify-between items-center
-      lg:border-none lg:pb-0 lg:justify-center lg:w-auto">
-        <a class="flex justify-between items-center w-full" href={link}>
-          {title}
-          <img 
-            src={icon} 
-            alt={title}
-            title={title}
-            class="size-8 lg:hidden iconNavbar"
-          />
-        </a>
-      </li>
-    ))}
-  </ul>
+    <ul 
+      id="menuMobile" 
+      class="h-screen w-screen text-grayStrong dark:text-gray px-4 transition duration-700
+      scale-0 flex flex-col items-start justify-center gap-y-8 gap-x-12 
+      dark:bg-gradient-to-r dark:from-secondary/95 dark:to-third bg-gradient-to-r from-white/95 to-fourth 
+      max-[1024px]:fixed max-[1024px]:text-4xl max-[1024px]:left-0 max-[1024px]:top-0
+      lg:h-auto lg:w-auto lg:flex-row lg:px-0 lg:scale-100 lg:bg-none lg:dark:bg-none">
+      {navbarLinks.map(({ title, link, icon }) => (
+        <li class="dark:lg:hover:text-primary lg:hover:text-purple-700 transition w-full
+        border-b dark:border-gray border-grayStrong pb-2 flex justify-between items-center
+        lg:border-none lg:pb-0 lg:justify-center lg:w-auto">
+          <a class="flex justify-between items-center w-full" href={link}>
+            {title}
+            <img 
+              src={icon} 
+              alt={title}
+              title={title}
+              class="size-8 lg:hidden iconNavbar"
+            />
+          </a>
+        </li>
+      ))}
+    </ul>
 
-  <aside class="absolute max-[1024px]:top-4 transition duration-700
-  max-[1024px]:bottom-0 max-[1024px]:right-16 lg:relative lg:flex lg:justify-center lg:items-center">
-    <ToggleTheme />
-  </aside>
-</nav>
+    <aside class="absolute max-[1024px]:top-4 transition duration-700
+    max-[1024px]:bottom-0 max-[1024px]:right-16 lg:relative lg:flex lg:justify-center lg:items-center">
+      <ToggleTheme />
+    </aside>
+  </nav>
+</div>
 
 <script>
   const menuIcon = document.getElementById('menuIcon');

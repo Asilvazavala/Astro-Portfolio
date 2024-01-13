@@ -18,35 +18,40 @@ interface projectsProps {
 
 export const projects: projectsProps[] = [
   {
-    image: '/imagenes/Projects/Clinica-fisio.webp',
-    cardColor: 'azulCyan-azulFuerte',
-    imgClassname: 'transition duration-7000 transform hover:translate-y-[-70%] lg:hover:translate-y-[-78%]',
-    title: 'Clínica fisioterapia',
-    description: 'Creé un sistema para reservar citas en la clínica, implementé EmailJS para gestionar las notificaciones por correo, cuenta con modo oscuro/claro, un acordeón y es adaptable a celulares.',
+    image: '/imagenes/Projects/blog-barcelona.webp',
+    cardColor: 'rosa-rojo',
+    imgClassname: 'transition duration-7000 transform hover:translate-y-[-62%] lg:hover:translate-y-[-72%]',
+    title: 'Blog culemania',
+    description: 'Noticias del FC Barcelona, implementé autenticación de usuario, CRUD de comentarios con posibilidad de dar like/dislike, guardado de información en base de datos, filtrado por id, renderizado condicional.',
     techs: [
       {
-        name: 'TypeScript',
-        icon: '/imagenes/Technologys/typescript.svg',
-        techClassName: 'bg-[#2F74C0] text-white'
+        name: 'JavaScript',
+        icon: '/imagenes/Technologys/javascript.svg',
+        techClassName: 'bg-[#F0DB4F] text-black'
       },
       {
         name: 'React',
         icon: '/imagenes/Technologys/react.svg',
-        techClassName: 'bg-[#B0ECFD] text-black'
+        techClassName: 'bg-[#B0ECFD] text-black',
       },
       {
-        name: 'Astro',
-        icon: '/imagenes/Technologys/astro.svg',
-        techClassName: 'bg-[#E54896] text-white'
+        name: 'PostgreSQL',
+        icon: '/imagenes/Technologys/postgresql.svg',
+        techClassName: 'bg-[#336791] text-white'
       },
       {
-        name: 'TailwindCSS',
-        icon: '/imagenes/Technologys/tailwindcss.svg',
-        techClassName: 'bg-[#38B2AC] text-black'
+        name: 'Node.js',
+        icon: '/imagenes/Technologys/nodejs.svg',
+        techClassName: 'bg-[#83CD29] text-black'
+      },
+      {
+        name: 'Auth0',
+        icon: '/imagenes/Technologys/auth0.svg',
+        techClassName: 'bg-[#EB5424] text-white'
       },
     ],
-    githubLink: 'https://github.com/Asilvazavala/agenda-fisioterapia',
-    liveLink: 'https://agenda-fisioterapia.vercel.app/'
+    githubLink: 'https://github.com/Asilvazavala/Blog-barcelona',
+    liveLink: 'https://blog-barcelona.vercel.app/'
   },
   {
     image: '/imagenes/Projects/valle-de-santiago.webp',
@@ -80,44 +85,8 @@ export const projects: projectsProps[] = [
     liveLink: 'https://valledesantiago.vercel.app/'
   },
   {
-    image: '/imagenes/Projects/ecommerce-burger-house.webp',
-    cardColor: 'naranjaOscuro-naranja',
-    imgClassname: 'transition duration-7000 transform hover:translate-y-[-47%] lg:hover:translate-y-[-61%]',
-    title: 'E-commerce',
-    description: 'Creé un e-commerce, con pasarela de pago, filtro por categoría, búsqueda por nombre, carrusel de ofertas, almacenamiento local para guardar carrito de compra y panel de administrador para gestionar productos.',
-    techs: [
-      {
-        name: 'TypeScript',
-        icon: '/imagenes/Technologys/typescript.svg',
-        techClassName: 'bg-[#2F74C0] text-white'
-      },
-      {
-        name: 'Next.js',
-        icon: '/imagenes/Technologys/nextjs.svg',
-        techClassName: 'bg-black text-white'
-      },
-      {
-        name: 'React',
-        icon: '/imagenes/Technologys/react.svg',
-        techClassName: 'bg-[#B0ECFD] text-black',
-      },
-      {
-        name: 'TailwindCSS',
-        icon: '/imagenes/Technologys/tailwindcss.svg',
-        techClassName: 'bg-[#38B2AC] text-black'
-      },
-      {
-        name: 'Stripe',
-        icon: '/imagenes/Technologys/stripe.svg',
-        techClassName: 'bg-[#32325D] text-white'
-      },
-    ],
-    githubLink: 'https://github.com/Asilvazavala/Ecommerce-Food',
-    liveLink: 'https://as-ecommerce-food.vercel.app/'
-  },
-  {
     image: '/imagenes/Projects/shorter-link.webp',
-    cardColor: 'verde-azul',
+    cardColor: 'lila-morado',
     imgClassname: 'transition duration-7000 transform hover:translate-y-[-50%] lg:hover:translate-y-[-63%]',
     title: 'Acortador de links',
     description: 'Implementé un sistema para que al introducir un enlace, se pueda acortar y copiar al portapapeles con un solo clic, los enlaces se guardan en el almacenamiento local, la información es consumida desde una API.',
@@ -173,16 +142,21 @@ export const projects: projectsProps[] = [
     liveLink: 'https://as-bienes-raices.vercel.app/'
   },
   {
-    image: '/imagenes/Projects/blog-barcelona.webp',
-    cardColor: 'rosa-rojo',
-    imgClassname: 'transition duration-7000 transform hover:translate-y-[-62%] lg:hover:translate-y-[-72%]',
-    title: 'Blog culemania',
-    description: 'Noticias del FC Barcelona, implementé autenticación de usuario, CRUD de comentarios con posibilidad de dar like/dislike, guardado de información en base de datos, filtrado por id, renderizado condicional.',
+    image: '/imagenes/Projects/ecommerce-burger-house.webp',
+    cardColor: 'naranjaOscuro-naranja',
+    imgClassname: 'transition duration-7000 transform hover:translate-y-[-47%] lg:hover:translate-y-[-61%]',
+    title: 'E-commerce',
+    description: 'Creé un e-commerce, con pasarela de pago, filtro por categoría, búsqueda por nombre, carrusel de ofertas, almacenamiento local para guardar carrito de compra y panel de administrador para gestionar productos.',
     techs: [
       {
-        name: 'JavaScript',
-        icon: '/imagenes/Technologys/javascript.svg',
-        techClassName: 'bg-[#F0DB4F] text-black'
+        name: 'TypeScript',
+        icon: '/imagenes/Technologys/typescript.svg',
+        techClassName: 'bg-[#2F74C0] text-white'
+      },
+      {
+        name: 'Next.js',
+        icon: '/imagenes/Technologys/nextjs.svg',
+        techClassName: 'bg-black text-white'
       },
       {
         name: 'React',
@@ -190,23 +164,49 @@ export const projects: projectsProps[] = [
         techClassName: 'bg-[#B0ECFD] text-black',
       },
       {
-        name: 'PostgreSQL',
-        icon: '/imagenes/Technologys/postgresql.svg',
-        techClassName: 'bg-[#336791] text-white'
+        name: 'TailwindCSS',
+        icon: '/imagenes/Technologys/tailwindcss.svg',
+        techClassName: 'bg-[#38B2AC] text-black'
       },
       {
-        name: 'Node.js',
-        icon: '/imagenes/Technologys/nodejs.svg',
-        techClassName: 'bg-[#83CD29] text-black'
-      },
-      {
-        name: 'Auth0',
-        icon: '/imagenes/Technologys/auth0.svg',
-        techClassName: 'bg-[#EB5424] text-white'
+        name: 'Stripe',
+        icon: '/imagenes/Technologys/stripe.svg',
+        techClassName: 'bg-[#32325D] text-white'
       },
     ],
-    githubLink: 'https://github.com/Asilvazavala/Blog-barcelona',
-    liveLink: 'https://blog-barcelona.vercel.app/'
+    githubLink: 'https://github.com/Asilvazavala/Ecommerce-Food',
+    liveLink: 'https://as-ecommerce-food.vercel.app/'
+  },
+  {
+    image: '/imagenes/Projects/Clinica-fisio.webp',
+    cardColor: 'azulCyan-azulFuerte',
+    imgClassname: 'transition duration-7000 transform hover:translate-y-[-70%] lg:hover:translate-y-[-78%]',
+    title: 'Clínica fisioterapia',
+    description: 'Creé un sistema para reservar citas en la clínica, implementé EmailJS para gestionar las notificaciones por correo, cuenta con modo oscuro/claro, un acordeón y es adaptable a celulares.',
+    techs: [
+      {
+        name: 'TypeScript',
+        icon: '/imagenes/Technologys/typescript.svg',
+        techClassName: 'bg-[#2F74C0] text-white'
+      },
+      {
+        name: 'React',
+        icon: '/imagenes/Technologys/react.svg',
+        techClassName: 'bg-[#B0ECFD] text-black'
+      },
+      {
+        name: 'Astro',
+        icon: '/imagenes/Technologys/astro.svg',
+        techClassName: 'bg-[#E54896] text-white'
+      },
+      {
+        name: 'TailwindCSS',
+        icon: '/imagenes/Technologys/tailwindcss.svg',
+        techClassName: 'bg-[#38B2AC] text-black'
+      },
+    ],
+    githubLink: 'https://github.com/Asilvazavala/agenda-fisioterapia',
+    liveLink: 'https://agenda-fisioterapia.vercel.app/'
   },
   {
     image: '/imagenes/Projects/GymAS.webp',

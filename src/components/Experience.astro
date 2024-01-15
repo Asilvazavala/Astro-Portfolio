@@ -1,116 +1,144 @@
 ---
 import SectionContainer from "./SectionContainer.astro";
 import Title from "./Shared/Title.astro";
-import { experiences } from '../utils/ExperiencesData.astro';
+import { experiences } from "../utils/ExperiencesData.astro";
 
-import ExperienceIcon from '../icons/ExperienceIcon.astro';
-import AngularIcon from '../icons/AngularIcon.astro';
-import BallSoccerIcon from '../icons/BallSoccerIcon.astro';
-import BuildingsIcon from '../icons/BuildingsIcon.astro';
-import ClinicaIcon from '../icons/ClinicaIcon.astro';
-import GymIcon from '../icons/GymIcon.astro';
-import LanguageIcon from '../icons/LanguageIcon.astro';
-import PHPIcon from '../icons/PHPIcon.astro';
-import ReactIcon from '../icons/ReactIcon.astro';
-import ShoppingCartIcon from '../icons/ShoppingCartIcon.astro';
-import StatisticsIcon from '../icons/StatisticsIcon.astro';
-import TailwindIcon from '../icons/TailwindIcon.astro';
-import TypeScriptIcon from '../icons/TypeScriptIcon.astro';
+import ExperienceIcon from "../icons/ExperienceIcon.astro";
+import AngularIcon from "../icons/AngularIcon.astro";
+import BallSoccerIcon from "../icons/BallSoccerIcon.astro";
+import BuildingsIcon from "../icons/BuildingsIcon.astro";
+import ClipIcon from "../icons/ClipIcon.astro";
+import ClinicaIcon from "../icons/ClinicaIcon.astro";
+import GymIcon from "../icons/GymIcon.astro";
+import LanguageIcon from "../icons/LanguageIcon.astro";
+import PHPIcon from "../icons/PHPIcon.astro";
+import ReactIcon from "../icons/ReactIcon.astro";
+import ShoppingCartIcon from "../icons/ShoppingCartIcon.astro";
+import StatisticsIcon from "../icons/StatisticsIcon.astro";
+import TailwindIcon from "../icons/TailwindIcon.astro";
+import TypeScriptIcon from "../icons/TypeScriptIcon.astro";
 ---
 
 <SectionContainer>
-  <div id="experiencia" class="flex justify-center lg:justify-start items-center gap-x-2 mb-8 pt-12 mt-20">
-    <div><ExperienceIcon class="dark:text-gray text-grayStrong size-9 lg:size-11" /></div>
+  <div
+    id="experiencia"
+    class="flex justify-center lg:justify-start items-center gap-x-2 mb-8 pt-12 mt-20"
+  >
+    <div>
+      <ExperienceIcon
+        class="dark:text-gray text-grayStrong size-9 lg:size-11"
+      />
+    </div>
     <Title className="text-4xl lg:text-5xl" title="Experiencia" />
   </div>
-  <header id="experienciaContenedor" class="flex min-h-[380px] overflow-x-auto overflow-y-hidden">    
-    {experiences.map(({ year, icon, title, description, link }) => (
-      <article class="flex flex-col max-h-[50px] experience-article">
-        <div class="flex flex-col justify-center items-center relative">
-          <span class="dark:text-gray text-grayStrong absolute top-0 -left-4 experience-year">{year}</span>
-          <div class="flex mt-8 relative">
-            <aside class="flex h-12 w-[2.5px] bg-gray mr-28 vertical-line
-            dark:bg-grayStrong text-grayStrong text-sm">
-              <div class="absolute -top-1 left-0 flex justify-start items-start gap-x-2 separator">
-                <span class="opacity-0">|</span>
-                <span>|</span>
-                <span>|</span>
-                <span>|</span>
-                <span>|</span>
-                <span>|</span>
-                <span>|</span>
-                <span>|</span>
-                <span>|</span>
-                <span>|</span>
-              </div>
-            </aside>
-          </div>
-          <div class="dark:text-grayStrong text-gray absolute -bottom-9 -left-[12px] experience-icon mt-2">
-            {icon === 'AngularIcon'
-              ? <AngularIcon />
-              : icon === 'BallSoccerIcon'
-                ? <BallSoccerIcon />
-                : icon === 'BuildingsIcon'
-                  ? <BuildingsIcon />
-                  : icon === 'ClinicaIcon'
-                    ? <ClinicaIcon />
-                    : icon === 'GymIcon'
-                      ? <GymIcon />
-                      : icon === 'LanguageIcon'
-                        ? <LanguageIcon />
-                        : icon === 'PHPIcon'
-                          ? <PHPIcon />
-                          : icon === 'ReactIcon'
-                            ? <ReactIcon />
-                            : icon === 'ShoppingCartIcon'
-                              ? <ShoppingCartIcon />
-                              : icon === 'StatisticsIcon'
-                                ? <StatisticsIcon />
-                                : icon === 'TailwindIcon'
-                                  ? <TailwindIcon />
-                                  : icon === 'TypeScriptIcon'
-                                    ? <TypeScriptIcon />
-                                    : icon === 'ExperienceIcon'
-                                      ? <ExperienceIcon />
-                                      : icon === null
-            }
-          </div>
-          <footer class="absolute flex justify-center items-center flex-col mt-[390px] min-w-[340px]">
-            <h2 class="relative dark:text-primary text-fifth font-medium text-xl experience-title hidden">{title}</h2>
-            <p class="dark:text-gray text-grayStrong leading-[1.5rem] experience-description hidden text-sm">{description}</p>
-            {link && 
-            <a href={link} target="_blank" rel="noopener" 
-            class="hidden experience-button text-purple-700 lg:hover:text-white 
+  <header
+    id="experienciaContenedor"
+    class="flex min-h-[380px] overflow-x-auto overflow-y-hidden"
+  >
+    {
+      experiences.map(({ year, icon, title, description, link }) => (
+        <article class="flex flex-col max-h-[50px] experience-article">
+          <div class="flex flex-col justify-center items-center relative">
+            <span class="dark:text-gray text-grayStrong absolute top-0 -left-4 experience-year">
+              {year}
+            </span>
+            <div class="flex mt-8 relative">
+              <aside
+                class="flex h-12 w-[2.5px] bg-gray mr-28 vertical-line
+            dark:bg-grayStrong text-grayStrong text-sm"
+              >
+                <div class="absolute -top-1 left-0 flex justify-start items-start gap-x-2 separator">
+                  <span class="opacity-0">|</span>
+                  <span>|</span>
+                  <span>|</span>
+                  <span>|</span>
+                  <span>|</span>
+                  <span>|</span>
+                  <span>|</span>
+                  <span>|</span>
+                  <span>|</span>
+                  <span>|</span>
+                </div>
+              </aside>
+            </div>
+            <div class="dark:text-grayStrong text-gray absolute -bottom-9 -left-[12px] experience-icon mt-2">
+              {icon === "AngularIcon" ? (
+                <AngularIcon />
+              ) : icon === "BallSoccerIcon" ? (
+                <BallSoccerIcon />
+              ) : icon === "BuildingsIcon" ? (
+                <BuildingsIcon />
+              ) : icon === "ClinicaIcon" ? (
+                <ClinicaIcon />
+              ) : icon === "GymIcon" ? (
+                <GymIcon />
+              ) : icon === "LanguageIcon" ? (
+                <LanguageIcon />
+              ) : icon === "PHPIcon" ? (
+                <PHPIcon />
+              ) : icon === "ReactIcon" ? (
+                <ReactIcon />
+              ) : icon === "ShoppingCartIcon" ? (
+                <ShoppingCartIcon />
+              ) : icon === "StatisticsIcon" ? (
+                <StatisticsIcon />
+              ) : icon === "TailwindIcon" ? (
+                <TailwindIcon />
+              ) : icon === "TypeScriptIcon" ? (
+                <TypeScriptIcon />
+              ) : icon === "ExperienceIcon" ? (
+                <ExperienceIcon />
+              ) : icon === "ClipIcon" ? (
+                <ClipIcon />
+              ) : null}
+            </div>
+            <footer class="absolute flex justify-center items-center flex-col mt-[390px] min-w-[340px]">
+              <h2 class="relative dark:text-primary text-fifth font-medium text-xl experience-title hidden">
+                {title}
+              </h2>
+              <p class="dark:text-gray text-grayStrong leading-[1.5rem] experience-description hidden text-sm">
+                {description}
+              </p>
+              {link && (
+                <a
+                  href={link}
+                  target="_blank"
+                  rel="noopener"
+                  class="hidden experience-button text-purple-700 lg:hover:text-white 
             border border-purple-700 lg:hover:bg-gradient-to-r from-purple-500 via-purple-600 
             to-purple-700 font-medium rounded-lg text-sm px-3 py-1.5 text-center me-2 mb-2 
-            dark:border-purple-400 dark:text-purple-400 lg:dark:hover:text-white transition mt-2">
-              Ver más
-            </a>}
-          </footer>
-        </div>
-      </article>
-    ))}
+            dark:border-purple-400 dark:text-purple-400 lg:dark:hover:text-white transition mt-2"
+                >
+                  Ver más
+                </a>
+              )}
+            </footer>
+          </div>
+        </article>
+      ))
+    }
   </header>
 </SectionContainer>
 
 <script>
-  const articleExperiences = document.querySelectorAll('.experience-article');
-  const experiencesContainer = document.getElementById('experienciaContenedor');
+  const articleExperiences = document.querySelectorAll(".experience-article");
+  const experiencesContainer = document.getElementById("experienciaContenedor");
   let activeExperience: any = null;
 
-  if (experiencesContainer) setActiveExperience(experiencesContainer.firstElementChild);
-      
+  if (experiencesContainer)
+    setActiveExperience(experiencesContainer.firstElementChild);
+
   function setActiveExperience(experience: any) {
     if (activeExperience) {
-      activeExperience.classList.remove('active');
+      activeExperience.classList.remove("active");
     }
 
-    experience.classList.add('active');
+    experience.classList.add("active");
     activeExperience = experience;
   }
 
   articleExperiences.forEach((article) => {
-    article.addEventListener('mouseover', () => {
+    article.addEventListener("mouseover", () => {
       setActiveExperience(article);
     });
   });
@@ -119,14 +147,14 @@ import TypeScriptIcon from '../icons/TypeScriptIcon.astro';
 <style>
   .experience-article.active .vertical-line {
     height: 100px;
-    background-color: #8C2DE0;
-    transition: height .3s ease-in-out;
+    background-color: #8c2de0;
+    transition: height 0.3s ease-in-out;
   }
 
   body.dark .experience-article.active .vertical-line {
     height: 100px;
     background-color: #00abf0;
-    transition: height .3s ease-in-out;
+    transition: height 0.3s ease-in-out;
   }
 
   body.dark .experience-article.active .experience-year,

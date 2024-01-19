@@ -4,6 +4,8 @@ Proyecto creado para presentar mi trabajo como desarrrollador front-end, además
 
 👉 Ve el proyecto aquí: [Mi portafolio](https://as-work.vercel.app/)
 
+Tecnologías: Astro, TypeScript & TailwindCSS.
+
 ## 🧞 Comandos básicos
 
 Proyecto creado con:

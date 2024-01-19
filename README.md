@@ -41,4 +41,8 @@ npm install @astrojs/ts-plugin swiper @fontsource-variable/onest @fontsource/rub
 
 ## 🎆 Imágenes del proyecto
 
-![logo](https://github.com/Asilvazavala/Astro-Portfolio/blob/a8ab9097aadd49493efb3a14154fd99d7cd71ad4/public/imagenes/General/LogoAS-dark.webp)
+![logo](https://github.com/Asilvazavala/My-Portfolio/blob/31a5873c76318590e97c59254027e6e2686c5272/src/imagenes/Mobile/Portfolio/portfolio.png)
+
+![logo](https://github.com/Asilvazavala/My-Portfolio/blob/31a5873c76318590e97c59254027e6e2686c5272/src/imagenes/Mobile/Portfolio/portfolioMobile.png)
+
+![logo](https://github.com/Asilvazavala/My-Portfolio/blob/31a5873c76318590e97c59254027e6e2686c5272/src/imagenes/Mobile/Portfolio/portfolioMobile2.png)

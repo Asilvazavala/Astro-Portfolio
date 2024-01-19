@@ -11,7 +11,7 @@ Tecnologías: Astro, TypeScript & TailwindCSS.
 Proyecto creado con:
 
 ```sh
-npm create astro@latest -- --template basics
+npm create astro@latest -- --template basics --tailwind --typescript
 ```
 
 Todos los comandos son ejecutados en la raíz del proyecto, desde la terminal:
@@ -27,18 +27,16 @@ Todos los comandos son ejecutados en la raíz del proyecto, desde la terminal:
 
 ## 👀 Comandos de las dependencias
 
-| Command                                  | Action               |
-| :--------------------------------------- | :------------------- |
-| `npx astro add tailwind`                 | Installs TailwindCSS |
-| `npm install @astrojs/ts-plugin`         | Installs TypeScript  |
-| `npm install swiper`                     | Installs Swiper      |
-| `npm install @fontsource-variable/onest` | Installs font Onest  |
-| `npm install @fontsource/rubik-dirt`     | Installs font Onest  |
+| Command                                  | Action              |
+| :--------------------------------------- | :------------------ |
+| `npm install swiper`                     | Installs Swiper     |
+| `npm install @fontsource-variable/onest` | Installs font Onest |
+| `npm install @fontsource/rubik-dirt`     | Installs font Onest |
 
 Instalar todas las dependencias:
 
 ```sh
-npm install @astrojs/ts-plugin swiper @fontsource-variable/onest @fontsource/rubik-dirt
+npm install swiper @fontsource-variable/onest @fontsource/rubik-dirt
 ```
 
 ## 🎆 Imágenes del proyecto

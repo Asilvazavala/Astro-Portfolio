@@ -1,8 +1,8 @@
 ---
-import '@fontsource-variable/onest';
+import "@fontsource-variable/onest";
 interface Props {
-	title: string;
-	description: string;
+  title: string;
+  description: string;
 }
 
 const { title, description } = Astro.props;
@@ -10,49 +10,84 @@ const { title, description } = Astro.props;
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content={description} />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/imagenes/General/LogoAS.webp" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body class="dark h-full w-full overflow-x-hidden">
-		<slot />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/imagenes/General/LogoAS.webp"
+    />
+    <meta name="generator" content={Astro.generator} />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://as-work.vercel.app/" />
+    <meta
+      property="og:title"
+      content="Portafolio de Antonio Silva | Desarrollador Front-end."
+    />
+    <meta
+      property="og:description"
+      content="Profesional en el diseño y desarrollo web de alto rendimiento, especializado en JavaScript, React y TailwindCSS"
+    />
+    <meta
+      property="og:image"
+      content="https://github.com/Asilvazavala/My-Portfolio/blob/b022a3409df8c508e85f7981ac9f025e478b0a68/src/imagenes/Mobile/Portfolio/portfolio.png"
+    />
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://as-work.vercel.app/" />
+    <meta
+      property="twitter:title"
+      content="Portafolio de Antonio Silva | Desarrollador Front-end."
+    />
+    <meta
+      property="twitter:description"
+      content="Profesional en el diseño y desarrollo web de alto rendimiento, especializado en JavaScript, React y TailwindCSS"
+    />
+    <meta
+      property="twitter:image"
+      content="https://github.com/Asilvazavala/My-Portfolio/blob/b022a3409df8c508e85f7981ac9f025e478b0a68/src/imagenes/Mobile/Portfolio/portfolio.png"
+    />
+
+    <title>{title}</title>
+  </head>
+  <body class="dark h-full w-full overflow-x-hidden">
+    <slot />
+  </body>
 </html>
 <style is:global>
-	:root {
-		color-scheme: dark light;
-	}
-
-	html {
-  	font-family: 'Onest Variable', sans-serif;
-		scroll-behavior: smooth;
-	}
-
-	@media (min-width: 1800px) {
-  html {
-    zoom: 1.4;
+  :root {
+    color-scheme: dark light;
   }
-}
 
-@media (min-width: 2300px) {
   html {
-    zoom: 1.8;
+    font-family: "Onest Variable", sans-serif;
+    scroll-behavior: smooth;
   }
-}
+
+  @media (min-width: 1800px) {
+    html {
+      zoom: 1.4;
+    }
+  }
+
+  @media (min-width: 2300px) {
+    html {
+      zoom: 1.8;
+    }
+  }
 </style>
 
 <script>
-	let previousTitle = document.title;
-	window.addEventListener('blur', () => {
-		previousTitle = document.title
-		document.title = `😱 ¡No te vayas!`
-	})
+  let previousTitle = document.title;
+  window.addEventListener("blur", () => {
+    previousTitle = document.title;
+    document.title = `😱 ¡No te vayas!`;
+  });
 
-	window.addEventListener('focus', () => {
-		document.title = previousTitle;
-	})
+  window.addEventListener("focus", () => {
+    document.title = previousTitle;
+  });
 </script>

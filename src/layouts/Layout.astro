@@ -21,8 +21,9 @@ const { title, description } = Astro.props;
     />
     <meta name="generator" content={Astro.generator} />
 
-    <meta property="og:type" content="website" />
+    <!-- Facebook Meta Tags -->
     <meta property="og:url" content="https://as-work.vercel.app/" />
+    <meta property="og:type" content="website" />
     <meta
       property="og:title"
       content="Portafolio de Antonio Silva | Desarrollador Front-end."
@@ -33,22 +34,24 @@ const { title, description } = Astro.props;
     />
     <meta
       property="og:image"
-      content="https://as-work.vercel.app/imagenes/OpenGraph/opengraph.png"
+      content="https://github.com/Asilvazavala/Astro-Portfolio/blob/main/public/imagenes/OpenGraph/opengraph.png?raw=true"
     />
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="twitter:domain" content="as-work.vercel.app" />
     <meta property="twitter:url" content="https://as-work.vercel.app/" />
     <meta
-      property="twitter:title"
+      name="twitter:title"
       content="Portafolio de Antonio Silva | Desarrollador Front-end."
     />
     <meta
-      property="twitter:description"
+      name="twitter:description"
       content="Profesional en el diseño y desarrollo web de alto rendimiento, especializado en JavaScript, React y TailwindCSS"
     />
     <meta
-      property="twitter:image"
-      content="https://as-work.vercel.app/imagenes/OpenGraph/opengraph.png"
+      name="twitter:image"
+      content="https://github.com/Asilvazavala/Astro-Portfolio/blob/main/public/imagenes/OpenGraph/opengraph.png?raw=true"
     />
 
     <title>{title}</title>

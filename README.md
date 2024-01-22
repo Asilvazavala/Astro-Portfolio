@@ -27,11 +27,11 @@ Todos los comandos son ejecutados en la raíz del proyecto, desde la terminal:
 
 ## 👀 Comandos de las dependencias
 
-| Command                                  | Action              |
-| :--------------------------------------- | :------------------ |
-| `npm install swiper`                     | Installs Swiper     |
-| `npm install @fontsource-variable/onest` | Installs font Onest |
-| `npm install @fontsource/rubik-dirt`     | Installs font Onest |
+| Command                                  | Action                   |
+| :--------------------------------------- | :----------------------- |
+| `npm install swiper`                     | Installs Swiper          |
+| `npm install @fontsource-variable/onest` | Installs font onest      |
+| `npm install @fontsource/rubik-dirt`     | Installs font rubik-dirt |
 
 Instalar todas las dependencias:
 

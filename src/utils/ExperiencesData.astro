@@ -1,4 +1,23 @@
 ---
+import ExperienceIcon from "../icons/ExperienceIcon.astro";
+import AngularIcon from "../icons/AngularIcon.astro";
+import BallSoccerIcon from "../icons/BallSoccerIcon.astro";
+import BuildingsIcon from "../icons/BuildingsIcon.astro";
+import ClipIcon from "../icons/ClipIcon.astro";
+import ClinicaIcon from "../icons/ClinicaIcon.astro";
+import GymIcon from "../icons/GymIcon.astro";
+import LanguageIcon from "../icons/LanguageIcon.astro";
+import PHPIcon from "../icons/PHPIcon.astro";
+import ReactIcon from "../icons/ReactIcon.astro";
+import ShoppingCartIcon from "../icons/ShoppingCartIcon.astro";
+import StatisticsIcon from "../icons/StatisticsIcon.astro";
+import TailwindIcon from "../icons/TailwindIcon.astro";
+import TypeScriptIcon from "../icons/TypeScriptIcon.astro";
+
+interface ExperiencesIconsType {
+  [key: string]: (_props: Record<string, any>) => any;
+}
+
 interface experiencesProps {
   year?: number;
   icon: string;
@@ -6,6 +25,23 @@ interface experiencesProps {
   description: string;
   link?: string;
 }
+
+export const experiencesIcons: ExperiencesIconsType = {
+  ExperienceIcon,
+  AngularIcon,
+  BallSoccerIcon,
+  BuildingsIcon,
+  ClipIcon,
+  ClinicaIcon,
+  GymIcon,
+  LanguageIcon,
+  PHPIcon,
+  ReactIcon,
+  ShoppingCartIcon,
+  StatisticsIcon,
+  TailwindIcon,
+  TypeScriptIcon,
+};
 
 export const experiences: experiencesProps[] = [
   {

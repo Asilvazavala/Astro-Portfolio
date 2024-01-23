@@ -15,24 +15,28 @@ import { navbarLinks } from "../utils/NavbarData.astro";
         class="size-8 rounded-full cursor-pointer lg:size-6 hidden dark:block"
         src="/imagenes/General/LogoAS-dark.webp"
         alt="Logo"
-        title="Logo"
+        width="208"
+        height="170"
       />
+
       <img
         class="size-8 rounded-full cursor-pointer lg:size-6 dark:hidden"
         src="/imagenes/General/LogoAS.webp"
         alt="Logo"
         title="Logo"
+        width="208"
+        height="170"
       />
     </a>
 
     <div class="text-grayStrong dark:text-gray lg:hidden">
       <MenuIcon
         id="menuIcon"
-        class="size-8 cursor-pointer transition duration-700"
+        class="size-8 cursor-pointer transition duration-700 delay-200"
       />
       <XIcon
         id="closeMenuIcon"
-        class="size-8 absolute top-3 right-4 scale-0 z-[9999] transition duration-700"
+        class="size-8 absolute top-3 right-4 scale-0 z-[9999] transition duration-700 delay-0"
       />
     </div>
 
@@ -81,9 +85,13 @@ import { navbarLinks } from "../utils/NavbarData.astro";
   const menuItems = document.querySelectorAll("li");
 
   const toggleItems = () => {
-    menuIcon?.classList.toggle("scale-0");
-    closeMenuIcon?.classList.toggle("scale-0");
     menuMobile?.classList.toggle("scale-0");
+    menuIcon?.classList.toggle("scale-0");
+    menuIcon?.classList.toggle("delay-0");
+    menuIcon?.classList.toggle("delay-200");
+    closeMenuIcon?.classList.toggle("scale-0");
+    closeMenuIcon?.classList.toggle("delay-0");
+    closeMenuIcon?.classList.toggle("delay-200");
   };
 
   menuIcon?.addEventListener("click", () => {

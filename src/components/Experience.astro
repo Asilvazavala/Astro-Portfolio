@@ -6,7 +6,7 @@ import ExperienceIcon from "../icons/ExperienceIcon.astro";
 ---
 
 <SectionContainer>
-  <div
+  <aside
     id="experiencia"
     class="flex justify-center lg:justify-start items-center gap-x-2 mb-8 pt-12 mt-20"
   >
@@ -16,7 +16,7 @@ import ExperienceIcon from "../icons/ExperienceIcon.astro";
       />
     </div>
     <Title className="text-4xl lg:text-5xl" title="Experiencia" />
-  </div>
+  </aside>
   <header
     id="experienciaContenedor"
     class="flex min-h-[380px] overflow-x-auto overflow-y-hidden"
@@ -37,16 +37,13 @@ import ExperienceIcon from "../icons/ExperienceIcon.astro";
             dark:bg-grayStrong text-grayStrong text-sm"
                 >
                   <div class="absolute -top-1 left-0 flex justify-start items-start gap-x-2 separator">
-                    <span class="opacity-0">|</span>
-                    <span>|</span>
-                    <span>|</span>
-                    <span>|</span>
-                    <span>|</span>
-                    <span>|</span>
-                    <span>|</span>
-                    <span>|</span>
-                    <span>|</span>
-                    <span>|</span>
+                    {Array(10)
+                      .fill(null)
+                      .map((_, index) => {
+                        return (
+                          <span class={`${index === 0 && "opacity-0"}`}>|</span>
+                        );
+                      })}
                   </div>
                 </aside>
               </div>

@@ -1,16 +1,16 @@
 <main
   class="bg-white/50 bg-[radial-gradient(125%_125%_at_50%_10%,#fff_40%,#63e_100%)]
-dark:bg-slate-950 dark:bg-none transition-all duration-500 -z-50 w-full h-full overflow-hidden"
+dark:bg-slate-950 dark:bg-none transition-all duration-500 w-full h-full overflow-x-hidden -z-10"
 >
+  <aside
+    class="absolute md:fixed bottom-0 left-0 md:left-[-20%] top-[-10%] h-[500px] w-full md:w-[500px] rounded-full
+    bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,.15),rgba(255,255,255,0))]"
+  >
+  </aside>
+  <aside
+    class="absolute md:fixed bottom-0 right-0 md:right-[-20%] top-[-10%] h-[500px] w-full md:w-[500px] rounded-full
+    bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,.15),rgba(255,255,255,0))]"
+  >
+  </aside>
   <slot />
-  <aside
-    class="absolute bottom-0 left-0 lg:left-[-20%] top-[-10%] h-[500px] w-full lg:w-[500px] rounded-full
-  z-0 bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,.15),rgba(255,255,255,0))] overflow-hidden"
-  >
-  </aside>
-  <aside
-    class="absolute bottom-0 right-0 lg:right-[-20%] top-[-10%] h-[500px] w-full lg:w-[500px] rounded-full
-  z-0 bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,.15),rgba(255,255,255,0))] overflow-hidden"
-  >
-  </aside>
 </main>

@@ -1,5 +1,6 @@
 ---
 import "@fontsource-variable/onest";
+import BackgroundDynamic from "../helpers/BackgroundDynamic.astro";
 interface Props {
   title: string;
   description: string;
@@ -56,8 +57,10 @@ const { title, description } = Astro.props;
     <title>{title}</title>
   </head>
 
-  <body class="dark h-full w-full overflow-x-hidden">
-    <slot />
+  <body class="dark overflow-x-hidden">
+    <BackgroundDynamic>
+      <slot />
+    </BackgroundDynamic>
   </body>
 </html>
 <style is:global>

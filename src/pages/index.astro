@@ -5,7 +5,6 @@ import Experience from "../components/Experience.astro";
 import Hero from "../components/Hero.astro";
 import Navbar from "../components/Navbar.astro";
 import Projects from "../components/Projects.astro";
-import BackgroundDynamic from "../helpers/BackgroundDynamic.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
@@ -13,12 +12,10 @@ import Layout from "../layouts/Layout.astro";
   title="Portafolio de Antonio Silva | Desarrollador Front-end."
   description="Antonio Silva, desarrollador y programador web, especializado en JavaScript y React"
 >
-  <BackgroundDynamic>
-    <Navbar />
-    <Hero />
-    <Experience />
-    <Projects />
-    <About />
-    <Contact />
-  </BackgroundDynamic>
+  <Navbar />
+  <Hero />
+  <Experience />
+  <Projects />
+  <About />
+  <Contact />
 </Layout>

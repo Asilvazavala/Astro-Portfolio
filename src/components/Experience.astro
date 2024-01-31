@@ -19,7 +19,7 @@ import ExperienceIcon from "../icons/ExperienceIcon.astro";
   </aside>
   <header
     id="experienciaContenedor"
-    class="flex min-h-[380px] overflow-x-auto overflow-y-hidden"
+    class="flex min-h-[430px] overflow-x-auto overflow-y-hidden"
   >
     {
       experiences.map(({ year, icon, title, description, link }) => {
@@ -50,7 +50,7 @@ import ExperienceIcon from "../icons/ExperienceIcon.astro";
               <div class="dark:text-grayStrong text-gray absolute -bottom-9 -left-[12px] experience-icon mt-2">
                 {icon && CurrentIcon ? <CurrentIcon /> : null}
               </div>
-              <footer class="absolute flex justify-center items-center flex-col mt-[390px] min-w-[340px]">
+              <footer class="absolute flex justify-center items-center flex-col mt-[410px] min-w-[340px]">
                 <h2 class="relative dark:text-primary text-fifth font-medium text-xl experience-title hidden">
                   {title}
                 </h2>

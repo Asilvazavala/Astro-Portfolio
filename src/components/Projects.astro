@@ -1,12 +1,14 @@
 ---
 import SectionContainer from "./SectionContainer.astro";
+import Title from "./Shared/Title.astro";
+import { projects } from "../utils/ProjectsData.astro";
+
+import "swiper/css/bundle";
+
 import ProjectsIcon from "../icons/ProjectsIcon.astro";
 import GithubIcon from "../icons/GithubIcon.astro";
-import Title from "./Shared/Title.astro";
-import "swiper/css/bundle";
 import ArrowLeft from "../icons/ArrowLeft.astro";
 import ArrowRight from "../icons/ArrowRight.astro";
-import { projects } from "../utils/ProjectsData.astro";
 ---
 
 <SectionContainer>
@@ -45,7 +47,7 @@ import { projects } from "../utils/ProjectsData.astro";
                 />
               </div>
 
-              <header class="px-3 flex flex-col mt-2">
+              <header class="px-3 flex flex-col mt-2 mb-12">
                 <h2 class="text-white text-lg font-extrabold">{title}</h2>
                 <p class="text-zinc-300 text-sm">{description}</p>
               </header>
@@ -183,7 +185,7 @@ import { projects } from "../utils/ProjectsData.astro";
 
   .swiper-slide {
     width: 33%;
-    height: 380px;
+    height: auto;
     opacity: 0.5;
     position: relative;
   }
@@ -280,12 +282,6 @@ import { projects } from "../utils/ProjectsData.astro";
     box-shadow:
       0 0 15px rgba(255, 206, 0, 1),
       0 0 15px rgba(184, 40, 122, 1);
-  }
-
-  @media screen and (max-width: 1024px) {
-    .swiper-slide {
-      height: 430px;
-    }
   }
 
   @media screen and (max-width: 700px) {

@@ -1,4 +1,14 @@
 {
   "SEO_TITLE": "Portafolio de Antonio Silva | Desarrollador Front-end.",
-  "SEO_DESCRIPTION": "Desarrollador y programador web, especializado en JavaScript y React"
+  "SEO_DESCRIPTION": "Desarrollador y programador web, especializado en JavaScript y React",
+  "NAV_ELEMENT_1": "Inicio",
+  "NAV_ELEMENT_2": "Experiencia",
+  "NAV_ELEMENT_3": "Proyectos",
+  "NAV_ELEMENT_4": "Sobre mi",
+  "NAV_ELEMENT_5": "Contacto",
+  "HERO_GREETING": "Hola, Soy",
+  "HERO_POSITION": "Desarrollador Front-end",
+  "HERO_PARAGRAPH": "Profesional en el diseño y desarrollo web de alto rendimiento, especializado en TypeScript, React, y TailwindCSS. Me encanta resolver problemas y afrontar retos.",
+  "HERO_BUTTON_1": "Hablemos",
+  "HERO_BUTTON_2": "Currículum"
 }

@@ -14,8 +14,20 @@ const i18n = getI18N({ currentLocale });
 ---
 
 <Layout title={i18n.SEO_TITLE} description={i18n.SEO_DESCRIPTION}>
-  <Navbar />
-  <Hero />
+  <Navbar
+    NAV_ELEMENT_1={i18n.NAV_ELEMENT_1}
+    NAV_ELEMENT_2={i18n.NAV_ELEMENT_2}
+    NAV_ELEMENT_3={i18n.NAV_ELEMENT_3}
+    NAV_ELEMENT_4={i18n.NAV_ELEMENT_4}
+    NAV_ELEMENT_5={i18n.NAV_ELEMENT_5}
+  />
+  <Hero
+    greeting={i18n.HERO_GREETING}
+    position={i18n.HERO_POSITION}
+    paragraph={i18n.HERO_PARAGRAPH}
+    btn_1={i18n.HERO_BUTTON_1}
+    btn_2={i18n.HERO_BUTTON_2}
+  />
   <Experience />
   <Projects />
   <About />

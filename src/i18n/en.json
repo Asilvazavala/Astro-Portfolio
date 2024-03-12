@@ -1,4 +1,14 @@
 {
   "SEO_TITLE": "Antonio Silva Portfolio | Frontend Developer.",
-  "SEO_DESCRIPTION": "Web developer and programmer, specialized in JavaScript and React"
+  "SEO_DESCRIPTION": "Web developer and programmer, specialized in JavaScript and React",
+  "NAV_ELEMENT_1": "Home",
+  "NAV_ELEMENT_2": "Experience",
+  "NAV_ELEMENT_3": "Projects",
+  "NAV_ELEMENT_4": "About",
+  "NAV_ELEMENT_5": "Contact",
+  "HERO_GREETING": "Hi, I´m",
+  "HERO_POSITION": "Front-end Developer",
+  "HERO_PARAGRAPH": "Professional in high-performance web design and development, specialized in TypeScript, React, and TailwindCSS. I love solving problems and facing challenges.",
+  "HERO_BUTTON_1": "Let´s talk",
+  "HERO_BUTTON_2": "Resume"
 }

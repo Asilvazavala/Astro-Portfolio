@@ -3,33 +3,61 @@ interface navbarLinksProps {
   title: string;
   link: string;
   icon: string;
-};
+}
 
-export const navbarLinks: navbarLinksProps[] = [
+const {
+  NAV_ELEMENT_1,
+  NAV_ELEMENT_2,
+  NAV_ELEMENT_3,
+  NAV_ELEMENT_4,
+  NAV_ELEMENT_5,
+} = Astro.props;
+
+const navbarLinks: navbarLinksProps[] = [
   {
-    title: 'Inicio',
-    link: '#inicio',
-    icon: '/imagenes/Navbar/HomeIcon.svg'
+    title: NAV_ELEMENT_1,
+    link: "#inicio",
+    icon: "/imagenes/Navbar/HomeIcon.svg",
   },
   {
-    title: 'Experiencia',
-    link: '#experiencia',
-    icon: '/imagenes/Navbar/ExperienceIcon.svg'
+    title: NAV_ELEMENT_2,
+    link: "#experiencia",
+    icon: "/imagenes/Navbar/ExperienceIcon.svg",
   },
   {
-    title: 'Proyectos',
-    link: '#proyectos',
-    icon: '/imagenes/Navbar/ProjectsIcon.svg'
+    title: NAV_ELEMENT_3,
+    link: "#proyectos",
+    icon: "/imagenes/Navbar/ProjectsIcon.svg",
   },
   {
-    title: 'Sobre mí',
-    link: '#sobreMi',
-    icon: '/imagenes/Navbar/AboutIcon.svg'
+    title: NAV_ELEMENT_4,
+    link: "#sobreMi",
+    icon: "/imagenes/Navbar/AboutIcon.svg",
   },
   {
-    title: 'Contacto',
-    link: '#contacto',
-    icon: '/imagenes/Navbar/ContactIcon.svg'
-  }
+    title: NAV_ELEMENT_5,
+    link: "#contacto",
+    icon: "/imagenes/Navbar/ContactIcon.svg",
+  },
 ];
 ---
+
+{
+  navbarLinks.map(({ title, link, icon }) => (
+    <li
+      class="dark:lg:hover:text-primary lg:hover:text-purple-700 transition w-full
+  border-b dark:border-gray border-grayStrong pb-2 flex justify-between items-center
+  lg:border-none lg:pb-0 lg:justify-center lg:w-auto"
+    >
+      <a class="flex justify-between items-center w-full" href={link}>
+        {title}
+        <img
+          src={icon}
+          alt={title}
+          title={title}
+          class="size-8 lg:hidden iconNavbar"
+        />
+      </a>
+    </li>
+  ))
+}

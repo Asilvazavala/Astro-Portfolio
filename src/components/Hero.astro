@@ -15,10 +15,12 @@ const { greeting, position, paragraph, btn_1, btn_2 } = Astro.props;
     <article
       class="flex flex-col gap-y-4 transition order-2 lg:order-1 text-center lg:text-left z-40"
     >
-      <header class="flex flex-col dark:text-primary text-fifth transition">
-        <span class="text-4xl font-bold">{greeting}</span>
+      <header class="flex flex-col transition">
+        <span class="text-4xl font-bold text-secondary dark:text-white"
+          >{greeting}</span
+        >
         <Title
-          className="text-[54px] lg:text-6xl leading-[3.5rem] lg:leading-[3rem]"
+          className="text-[54px] lg:text-6xl leading-[3.5rem] lg:leading-[3rem] dark:text-primary text-fifth"
           title="Antonio Silva"
         />
       </header>

@@ -43,118 +43,250 @@ export const experiencesIcons: ExperiencesIconsType = {
   TypeScriptIcon,
 };
 
-export const experiences: experiencesProps[] = [
+import { getI18N } from "../i18n/";
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+
+const experiences: experiencesProps[] = [
   {
     icon: "AngularIcon",
-    title: "Proyecto",
-    description:
-      "Creé una página para ayudar a los desarrolladores web a encontrar las mejores herramientas, implementé las nuevas directivas de Angular 17.",
+    title: i18n.EXPERIENCE_TITLE_1,
+    description: i18n.EXPERIENCE_DESCRIPTION_1,
     link: "https://devtools-as.vercel.app/",
   },
   {
     year: 2024,
     icon: "AngularIcon",
-    title: "Hoy",
-    description:
-      "Actualmente aprendiendo la nueva versión de Angular 17 realizando proyectos.",
+    title: i18n.EXPERIENCE_TITLE_2,
+    description: i18n.EXPERIENCE_DESCRIPTION_2,
   },
   {
     icon: "StatisticsIcon",
-    title: "Proyecto",
-    description:
-      "Rediseñé con Astro una página creada hace más de 30 años sobre mi ciudad Valle de Santiago aprendiendo librerías como Swiper.",
+    title: i18n.EXPERIENCE_TITLE_3,
+    description: i18n.EXPERIENCE_DESCRIPTION_3,
     link: "https://valledesantiago.vercel.app/",
   },
   {
     icon: "ClipIcon",
-    title: "Proyecto",
-    description:
-      "Implementé un sistema para acortar enlaces, la información es consumida desde una API.",
+    title: i18n.EXPERIENCE_TITLE_4,
+    description: i18n.EXPERIENCE_DESCRIPTION_4,
     link: "https://short-link-as.vercel.app/",
   },
   {
     icon: "TailwindIcon",
-    title: "Desafíos",
-    description:
-      "Terminé más de 10 desafíos de la página Frontend Mentor aprendiendo nuevas tecnologías como TailwindCSS",
+    title: i18n.EXPERIENCE_TITLE_5,
+    description: i18n.EXPERIENCE_DESCRIPTION_5,
     link: "https://www.frontendmentor.io/profile/Asilvazavala",
   },
   {
     icon: "ClinicaIcon",
-    title: "Proyecto",
-    description:
-      "Creé una página con Astro para registrar citas y dar a conocer una clínica de fisíoterapia.",
+    title: i18n.EXPERIENCE_TITLE_6,
+    description: i18n.EXPERIENCE_DESCRIPTION_6,
     link: "https://agenda-fisioterapia.vercel.app/",
   },
   {
     year: 2023,
     icon: "LanguageIcon",
-    title: "Aprendiendo tecnologías",
-    description:
-      "Practicando y aprendiendo Astro haciendo proyectos y mejorando mi conversación en inglés.",
+    title: i18n.EXPERIENCE_TITLE_7,
+    description: i18n.EXPERIENCE_DESCRIPTION_7,
   },
   {
     icon: "BuildingsIcon",
-    title: "Proyecto",
-    description:
-      "Diseñé un proyecto con Next.js sobre una inmobiliaria aprendiendo nuevas librerías como Leaflet o Framer Motion.",
+    title: i18n.EXPERIENCE_TITLE_8,
+    description: i18n.EXPERIENCE_DESCRIPTION_8,
     link: "https://as-bienes-raices.vercel.app/",
   },
   {
     icon: "ShoppingCartIcon",
-    title: "Proyecto",
-    description:
-      "Creé un e-commerce aprendiendo nuevas tecnologías como Clerk y Stripe, añadiendo un panel de administrador para gestionar ventas.",
+    title: i18n.EXPERIENCE_TITLE_9,
+    description: i18n.EXPERIENCE_DESCRIPTION_9,
     link: "https://as-ecommerce-food.vercel.app/",
   },
   {
     icon: "ExperienceIcon",
-    title: "Bootcamp",
-    description:
-      "Entré al bootcamp de Henry, realizando varios proyectos full-stack de forma individual y en equipo.",
+    title: i18n.EXPERIENCE_TITLE_10,
+    description: i18n.EXPERIENCE_DESCRIPTION_10,
     link: "https://www.talent.soyhenry.com/candidate/11914",
   },
   {
     year: 2022,
     icon: "TypeScriptIcon",
-    title: "Aprendiendo tecnologías",
-    description:
-      "Practicando y aprendiendo TypeScript, Next.js y PostgreSQL creando diversos proyectos.",
+    title: i18n.EXPERIENCE_TITLE_11,
+    description: i18n.EXPERIENCE_DESCRIPTION_11,
   },
   {
     icon: "BallSoccerIcon",
-    title: "Proyecto",
-    description:
-      "Realicé un blog aprendiendo tecnologías como Auth0 y Express, enfocado en noticias sobre mi equipo favorito, el FC Barcelona.",
+    title: i18n.EXPERIENCE_TITLE_12,
+    description: i18n.EXPERIENCE_DESCRIPTION_12,
     link: "https://blog-barcelona.vercel.app/",
   },
   {
     icon: "GymIcon",
-    title: "Proyecto",
-    description:
-      "Creé una landing para un gimnasio aprendiendo sobre routing en Vite e implementando componentes como pricing o galería interactiva.",
+    title: i18n.EXPERIENCE_TITLE_13,
+    description: i18n.EXPERIENCE_DESCRIPTION_13,
     link: "https://gym-as.vercel.app/",
   },
   {
     year: 2021,
     icon: "ReactIcon",
-    title: "Aprendiendo tecnologías",
-    description:
-      "Practicando y aprendiendo JavaScript, React, Redux y Node.js creando diversos proyectos.",
+    title: i18n.EXPERIENCE_TITLE_14,
+    description: i18n.EXPERIENCE_DESCRIPTION_14,
   },
   {
     year: 2020,
     icon: "PHPIcon",
-    title: "Primer proyecto",
-    description:
-      "Creación de una página interna en PHP para gestionar la base de datos de beneficiarios de un programa gubernamental.",
+    title: i18n.EXPERIENCE_TITLE_15,
+    description: i18n.EXPERIENCE_DESCRIPTION_15,
   },
   {
     year: 2015,
     icon: "ExperienceIcon",
-    title: "Primer trabajo",
-    description:
-      "Conseguí mi primer trabajo, en el gobierno como técnico, realizando mantenimiento de hardware y software en PC e impresoras.",
+    title: i18n.EXPERIENCE_TITLE_16,
+    description: i18n.EXPERIENCE_DESCRIPTION_16,
   },
 ];
 ---
+
+{
+  experiences.map(({ year, icon, title, description, link }) => {
+    const CurrentIcon = experiencesIcons[icon];
+
+    return (
+      <article class="flex flex-col max-h-[50px] experience-article">
+        <div class="flex flex-col justify-center items-center relative">
+          <span class="dark:text-gray text-grayStrong absolute top-0 -left-4 experience-year">
+            {year}
+          </span>
+          <div class="flex mt-8 relative">
+            <aside
+              class="flex h-12 w-[2.5px] bg-gray mr-28 vertical-line
+        dark:bg-grayStrong text-grayStrong text-sm"
+            >
+              <div class="absolute -top-1 left-0 flex justify-start items-start gap-x-2 separator">
+                {Array(10)
+                  .fill(null)
+                  .map((_, index) => {
+                    return (
+                      <span class={`${index === 0 && "opacity-0"}`}>|</span>
+                    );
+                  })}
+              </div>
+            </aside>
+          </div>
+          <div class="dark:text-grayStrong text-gray absolute -bottom-9 -left-[12px] experience-icon mt-2">
+            {icon && CurrentIcon ? <CurrentIcon /> : null}
+          </div>
+          <footer class="absolute mt-[410px] flex justify-center items-center flex-col min-w-[340px]">
+            <h2 class="dark:text-primary text-fifth font-medium text-xl experience-title hidden">
+              {title}
+            </h2>
+            <p class="dark:text-gray text-grayStrong leading-[1.5rem] experience-description hidden text-sm">
+              {description}
+            </p>
+            {link && (
+              <a
+                href={link}
+                target="_blank"
+                rel="noopener"
+                class="hidden experience-button text-purple-700 lg:hover:text-white 
+        border border-purple-700 lg:hover:bg-gradient-to-r from-purple-500 via-purple-600 
+        to-purple-700 font-medium rounded-lg text-sm px-3 py-1.5 text-center me-2 mb-2 
+        dark:border-purple-400 dark:text-purple-400 lg:dark:hover:text-white transition mt-2"
+              >
+                {i18n.EXPERIENCE_BUTTON}
+              </a>
+            )}
+          </footer>
+        </div>
+      </article>
+    );
+  })
+}
+
+<script>
+  const articleExperiences = document.querySelectorAll(".experience-article");
+  const experiencesContainer = document.getElementById("experienciaContenedor");
+  let activeExperience: any = null;
+
+  if (experiencesContainer)
+    setActiveExperience(experiencesContainer.firstElementChild);
+
+  function setActiveExperience(experience: any) {
+    if (activeExperience) {
+      activeExperience.classList.remove("active");
+    }
+
+    experience.classList.add("active");
+    activeExperience = experience;
+  }
+
+  articleExperiences.forEach((article) => {
+    article.addEventListener("mouseover", () => {
+      setActiveExperience(article);
+    });
+  });
+</script>
+
+<style>
+  .experience-article.active .vertical-line {
+    height: 100px;
+    background-color: #8c2de0;
+    transition: height 0.3s ease-in-out;
+  }
+
+  body.dark .experience-article.active .vertical-line {
+    height: 100px;
+    background-color: #00abf0;
+    transition: height 0.3s ease-in-out;
+  }
+
+  body.dark .experience-article.active .experience-year,
+  body.dark .experience-article.active .experience-icon {
+    color: white;
+  }
+
+  .experience-article.active .experience-year,
+  .experience-article.active .experience-icon {
+    color: #141e33;
+  }
+
+  .experience-article.active .experience-button,
+  .experience-article.active .experience-title,
+  .experience-article.active .experience-description {
+    display: block;
+    margin-right: 6rem;
+  }
+
+  .experience-article:first-child .experience-title {
+    margin-right: 20px;
+  }
+
+  .experience-article:first-child .experience-button {
+    margin-left: 70px;
+  }
+
+  .experience-article:first-child .experience-icon {
+    left: 0px;
+  }
+
+  .experience-article:first-child .separator,
+  .experience-article:first-child .vertical-line {
+    margin-left: 10px;
+  }
+
+  .experience-article:first-child .experience-year {
+    left: 0;
+  }
+
+  .experience-article:first-child .experience-description {
+    margin-left: 240px;
+    text-align: left;
+    min-width: 250px;
+    text-wrap: balance;
+  }
+
+  .experience-article:last-child .separator {
+    display: none;
+  }
+</style>

@@ -2,6 +2,9 @@
 import AboutIcon from "../icons/AboutIcon.astro";
 import SectionContainer from "./SectionContainer.astro";
 import Title from "./Shared/Title.astro";
+
+const { title, paragraph_1, paragraph_2, featured_1, featured_2, featured_3 } =
+  Astro.props;
 ---
 
 <SectionContainer>
@@ -10,22 +13,16 @@ import Title from "./Shared/Title.astro";
     class="flex justify-center lg:justify-start items-center gap-x-2 mb-8 pt-12 mt-8 lg:mt-28"
   >
     <AboutIcon class="dark:text-gray text-grayStrong size-9 lg:size-11" />
-    <Title className="text-4xl lg:text-5xl" title="Sobre mí" />
+    <Title className="text-4xl lg:text-5xl" title={title} />
   </div>
 
   <main class="grid grid-cols-1 lg:grid-cols-2 w-full gap-8">
     <article class="dark:text-gray text-grayStrong">
       <p class="mb-6 leading-8">
-        Apasionado desarrollador front-end con experiencia en JavaScript,
-        TypeScript, React, TailwindCSS, Bootstrap, Next.js, Astro, Node.js,
-        Express, PostgreSQL, Git, Github, además cuento con título en Ingeniería
-        en tecnologías de la información.
+        {paragraph_1}
       </p>
       <p class="leading-8">
-        Vivo en Guanajuato, México. Soy proactivo, perseverante y adaptable. Me
-        encanta el fútbol, los videojuegos y la tecnología, también tengo +8
-        años de experiencia trabajando como técnico realizando mantenimiento a
-        equipos de cómputo e impresoras.
+        {paragraph_2}
       </p>
     </article>
 
@@ -39,7 +36,7 @@ import Title from "./Shared/Title.astro";
           >1+</span
         >
         <span class="lg:text-2xl text-xl dark:text-white text-secondary"
-          >Año dev</span
+          >{featured_1}</span
         >
       </aside>
 
@@ -50,7 +47,7 @@ import Title from "./Shared/Title.astro";
           >20+</span
         >
         <span class="lg:text-2xl text-xl dark:text-white text-secondary"
-          >Proyectos</span
+          >{featured_2}</span
         >
       </aside>
 
@@ -61,7 +58,7 @@ import Title from "./Shared/Title.astro";
           >5+</span
         >
         <span class="lg:text-2xl text-xl dark:text-white text-secondary"
-          >Certificaciones</span
+          >{featured_3}</span
         >
       </aside>
 

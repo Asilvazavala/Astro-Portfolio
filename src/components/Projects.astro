@@ -9,6 +9,8 @@ import ProjectsIcon from "../icons/ProjectsIcon.astro";
 import GithubIcon from "../icons/GithubIcon.astro";
 import ArrowLeft from "../icons/ArrowLeft.astro";
 import ArrowRight from "../icons/ArrowRight.astro";
+
+const { title } = Astro.props;
 ---
 
 <SectionContainer>
@@ -17,7 +19,7 @@ import ArrowRight from "../icons/ArrowRight.astro";
     class="flex justify-center lg:justify-start items-center gap-x-2 mb-8 pt-12 mt-20 lg:mt-32"
   >
     <ProjectsIcon class="dark:text-gray text-grayStrong size-10 lg:size-14" />
-    <Title className="text-4xl lg:text-5xl" title="Proyectos" />
+    <Title className="text-4xl lg:text-5xl" title={title} />
   </div>
 
   <div class="swiper mySwiper">

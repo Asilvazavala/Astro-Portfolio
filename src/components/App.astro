@@ -28,8 +28,19 @@ const i18n = getI18N({ currentLocale });
     btn_1={i18n.HERO_BUTTON_1}
     btn_2={i18n.HERO_BUTTON_2}
   />
-  <Experience />
-  <Projects />
-  <About />
-  <Contact />
+  <Experience title={i18n.EXPERIENCE_SECTION} />
+  <Projects title={i18n.PROJECTS_SECTION} />
+  <About
+    title={i18n.ABOUT_SECTION}
+    paragraph_1={i18n.ABOUT_PARAGRAPH_1}
+    paragraph_2={i18n.ABOUT_PARAGRAPH_2}
+    featured_1={i18n.ABOUT_FEATURED_1}
+    featured_2={i18n.ABOUT_FEATURED_2}
+    featured_3={i18n.ABOUT_FEATURED_3}
+  />
+  <Contact
+    title={i18n.CONTACT_SECTION}
+    featured_1={i18n.CONTACT_FEATURED_1}
+    featured_2={i18n.CONTACT_FEATURED_2}
+  />
 </Layout>

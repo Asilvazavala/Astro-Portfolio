@@ -1,4 +1,8 @@
 ---
+import ProjectsIcon from "../icons/ProjectsIcon.astro";
+import GithubIcon from "../icons/GithubIcon.astro";
+import ArrowLeft from "../icons/ArrowLeft.astro";
+import ArrowRight from "../icons/ArrowRight.astro";
 interface techsProps {
   name: string;
   icon: string;
@@ -16,15 +20,19 @@ interface projectsProps {
   liveLink: string;
 }
 
-export const projects: projectsProps[] = [
+import { getI18N } from "../i18n/";
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+
+const projects: projectsProps[] = [
   {
     image: "/imagenes/Projects/blog-barcelona.webp",
     cardColor: "rosa-rojo",
     imgClassname:
       "transition duration-7000 transform hover:translate-y-[-62%] lg:group-hover:translate-y-[-72%]",
-    title: "Blog culemania",
-    description:
-      "Noticias del FC Barcelona, implementé autenticación de usuario, CRUD de comentarios con posibilidad de dar like/dislike, guardado de información en base de datos, filtrado por id, renderizado condicional.",
+    title: i18n.PROJECTS_TITLE_1,
+    description: i18n.PROJECTS_DESCRIPTION_1,
     techs: [
       {
         name: "JavaScript",
@@ -60,9 +68,8 @@ export const projects: projectsProps[] = [
     cardColor: "cyan-azul",
     imgClassname:
       "transition duration-7000 transform hover:translate-y-[-56%] lg:group-hover:translate-y-[-68%]",
-    title: "DevTools",
-    description:
-      "Proyecto creado para ayudar a los desarrolladores a encontrar las mejores herramientas/servicios, implementé las nuevas directivas de Angular 17, es de código abierto para que cualquier persona pueda contribuir.",
+    title: i18n.PROJECTS_TITLE_2,
+    description: i18n.PROJECTS_DESCRIPTION_2,
     techs: [
       {
         name: "TypeScript",
@@ -88,9 +95,8 @@ export const projects: projectsProps[] = [
     cardColor: "lila-morado",
     imgClassname:
       "transition duration-7000 transform hover:translate-y-[-50%] lg:group-hover:translate-y-[-63%]",
-    title: "Acortador de links",
-    description:
-      "Implementé un sistema para acortar enlaces, los cuales se guardan en una base de datos y se administran en un panel, cuenta con autenticación de NextAuth, rutas protegidas, la información es consumida desde una API.",
+    title: i18n.PROJECTS_TITLE_3,
+    description: i18n.PROJECTS_DESCRIPTION_3,
     techs: [
       {
         name: "TypeScript",
@@ -127,9 +133,8 @@ export const projects: projectsProps[] = [
     cardColor: "verdeClaro-verdeObscuro",
     imgClassname:
       "transition duration-10000 transform hover:translate-y-[-67%] lg:group-hover:translate-y-[-77%]",
-    title: "Valle de Santiago",
-    description:
-      "Rediseñé una página creada hace más de 30 años por mi padre la cual habla sobre la bella ciudad donde vivimos, agregué librerías como Swiper o Leaflet, creé más de 40 artículos y aumenté la fluidez del sitio con Astro.",
+    title: i18n.PROJECTS_TITLE_4,
+    description: i18n.PROJECTS_DESCRIPTION_4,
     techs: [
       {
         name: "TypeScript",
@@ -160,9 +165,8 @@ export const projects: projectsProps[] = [
     cardColor: "naranjaOscuro-naranja",
     imgClassname:
       "transition duration-7000 transform hover:translate-y-[-45%] lg:group-hover:translate-y-[-61%]",
-    title: "E-commerce",
-    description:
-      "Diseñé un e-commerce, con pasarela de pago, filtro por categoría, búsqueda por nombre, carrusel de ofertas, almacenamiento local para guardar carrito de compra y panel de administrador para gestionar productos.",
+    title: i18n.PROJECTS_TITLE_5,
+    description: i18n.PROJECTS_DESCRIPTION_5,
     techs: [
       {
         name: "TypeScript",
@@ -198,9 +202,8 @@ export const projects: projectsProps[] = [
     cardColor: "verdeClaro-verdeObscuro",
     imgClassname:
       "transition duration-10000 transform hover:translate-y-[-78%] lg:group-hover:translate-y-[-83%]",
-    title: "Bienes raíces",
-    description:
-      "Creé un sistema para vender propiedades, con filtros por precio, ubicación o casa, habilité la biblioteca Leaflef para ver propiedades en un mapa, agregué efectos de transición con Framer Motion.",
+    title: i18n.PROJECTS_TITLE_6,
+    description: i18n.PROJECTS_DESCRIPTION_6,
     techs: [
       {
         name: "TypeScript",
@@ -231,9 +234,8 @@ export const projects: projectsProps[] = [
     cardColor: "azulCyan-azulFuerte",
     imgClassname:
       "transition duration-7000 transform hover:translate-y-[-70%] lg:group-hover:translate-y-[-79%]",
-    title: "Clínica fisioterapia",
-    description:
-      "Creé un sistema para reservar citas en la clínica, implementé EmailJS para gestionar las notificaciones por correo, cuenta con modo oscuro/claro, un acordeón y es adaptable a celulares.",
+    title: i18n.PROJECTS_TITLE_7,
+    description: i18n.PROJECTS_DESCRIPTION_7,
     techs: [
       {
         name: "TypeScript",
@@ -264,9 +266,8 @@ export const projects: projectsProps[] = [
     cardColor: "amarillo-negro",
     imgClassname:
       "transition duration-10000 transform hover:translate-y-[-80%] lg:group-hover:translate-y-[-86%]",
-    title: "Gimnasio club",
-    description:
-      "Implementé una landing con integración de la API de whatsapp, sección de imágenes/galería usando grid, cálculo de masa corporal, testimonios de clientes, sección de precios de inscripción, diseño responsivo.",
+    title: i18n.PROJECTS_TITLE_8,
+    description: i18n.PROJECTS_DESCRIPTION_8,
     techs: [
       {
         name: "JavaScript",
@@ -292,9 +293,8 @@ export const projects: projectsProps[] = [
     cardColor: "naranjaOscuro-naranja",
     imgClassname:
       "transition duration-10000 transform hover:translate-y-[-71%] lg:group-hover:translate-y-[-78%]",
-    title: "Marketplace My seam",
-    description:
-      "Venta de ropa, cuenta con autenticación de usuario, puedes ser comprador y/o vendedor, pasarela de pago, filtros combinados, búsqueda por nombre, carrito de compras con almacenamiento local, panel de administrador, reseñas.",
+    title: i18n.PROJECTS_TITLE_9,
+    description: i18n.PROJECTS_DESCRIPTION_9,
     techs: [
       {
         name: "JavaScript",
@@ -335,9 +335,8 @@ export const projects: projectsProps[] = [
     cardColor: "rojo-rojoFuerte",
     imgClassname:
       "transition duration-7000 transform hover:translate-y-[-38%] lg:group-hover:translate-y-[-54%]",
-    title: "Mundo pokemon",
-    description:
-      "Creé un sistema para buscar, filtrar, consultar, modificar, eliminar y crear pokemon, los cuales son consumidos a través de una API externa y almacenados en una base de datos, cuenta con diseño responsivo.",
+    title: i18n.PROJECTS_TITLE_10,
+    description: i18n.PROJECTS_DESCRIPTION_10,
     techs: [
       {
         name: "JavaScript",
@@ -370,3 +369,279 @@ export const projects: projectsProps[] = [
   },
 ];
 ---
+
+<div class="swiper mySwiper">
+  <main class="swiper-wrapper">
+    {
+      projects.map(
+        ({
+          image,
+          cardColor,
+          imgClassname,
+          title,
+          description,
+          techs,
+          githubLink,
+          liveLink,
+        }) => (
+          <article
+            class={`swiper-slide rounded-xl ${cardColor} flex flex-col relative`}
+          >
+            <div class="w-full group h-[190px] overflow-hidden rounded-t-xl">
+              <img
+                loading="lazy"
+                decoding="async"
+                src={image}
+                alt={title}
+                class={`w-full h-auto object-cover rounded-t-xl ease-linear swiper-image ${imgClassname}`}
+              />
+            </div>
+
+            <header class="px-3 flex flex-col mt-2 mb-12">
+              <h2 class="text-white text-lg font-extrabold">{title}</h2>
+              <p class="text-zinc-300 text-sm">{description}</p>
+            </header>
+
+            <footer class="flex items-center px-3">
+              <article class="flex items-center gap-x-1 lg:gap-x-2 absolute bottom-2 left-2">
+                {techs.map(({ name, icon, techClassName }) => (
+                  <div class="flex items-center flex-col group">
+                    <img
+                      loading="lazy"
+                      decoding="async"
+                      src={icon}
+                      alt={name}
+                      class="size-6 lg:size-7 max-w-[24px] lg:max-w-[28px]"
+                    />
+                    <span
+                      class={`absolute -bottom-8 text-sm hidden group-hover:block 
+              ${techClassName} px-2 py-1 rounded-full font-medium`}
+                    >
+                      {name}
+                    </span>
+                  </div>
+                ))}
+              </article>
+
+              <article class="flex items-center gap-x-1 lg:gap-x-2 absolute bottom-1 right-2">
+                <a
+                  class="lg:hover:text-secondary transition group flex flex-col justify-center items-center"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="Ver código en GitHub"
+                  href={githubLink}
+                >
+                  <GithubIcon class="size-6 lg:size-7" />
+                  <span
+                    class="absolute -bottom-7 text-sm hidden lg:group-hover:block px-2 py-1 
+          rounded-full font-medium bg-secondary text-white"
+                  >
+                    {i18n.PROJECTS_BUTTON_1}
+                  </span>
+                </a>
+                <a
+                  class="lg:hover:text-secondary transition group flex flex-col justify-center items-center"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="Ver demo del proyecto"
+                  href={liveLink}
+                >
+                  <ProjectsIcon class="size-8 lg:size-9" />
+                  <span
+                    class="absolute -bottom-7 text-sm hidden lg:group-hover:block px-2 py-1 
+          rounded-full font-medium bg-secondary text-white"
+                  >
+                    {i18n.PROJECTS_BUTTON_2}
+                  </span>
+                </a>
+              </article>
+            </footer>
+          </article>
+        )
+      )
+    }
+  </main>
+
+  <footer class="swiper-pagination"></footer>
+  <aside
+    class="absolute bottom-2 -left-44 transform translate-x-1/2 w-full hidden lg:flex z-10"
+  >
+    <ArrowLeft
+      class="mr-[310px] cursor-pointer transition text-fifth hover:text-secondary dark:text-primary dark:hover:text-white button-prev"
+    />
+    <ArrowRight
+      class="cursor-pointer text-fifth hover:text-secondary dark:text-primary dark:hover:text-white transition button-next"
+    />
+  </aside>
+</div>
+
+<script>
+  import Swiper from "swiper/bundle";
+
+  document.addEventListener("DOMContentLoaded", function () {
+    let swiper: any;
+
+    function initSwiper() {
+      swiper = new Swiper(".mySwiper", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        initialSlide: 1,
+        coverflowEffect: {
+          rotate: window.innerWidth < 600 ? 0 : 50,
+          stretch: 0,
+          depth: 0,
+          modifier: 1,
+          slideShadows: true,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".button-next",
+          prevEl: ".button-prev",
+        },
+      });
+
+      const slides = document.querySelectorAll(".swiper-slide");
+      slides.forEach(function (slide, index) {
+        slide.addEventListener("click", function () {
+          swiper.slideTo(index);
+        });
+      });
+    }
+
+    initSwiper();
+
+    window.addEventListener("resize", function () {
+      if (swiper) {
+        swiper.destroy();
+      }
+
+      initSwiper();
+    });
+  });
+</script>
+
+<style>
+  .swiper {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .swiper-slide {
+    width: 33%;
+    height: auto;
+    opacity: 0.5;
+    position: relative;
+  }
+
+  .swiper-slide-active {
+    opacity: 1;
+  }
+
+  .swiper-image {
+    display: block;
+    width: 100%;
+    z-index: 9999;
+  }
+
+  .verdeClaro-verdeObscuro {
+    background: linear-gradient(220.55deg, #16a085 0%, #133114 100%);
+    box-shadow:
+      0 0 15px rgba(22, 160, 133, 1),
+      0 0 15px rgba(19, 49, 20, 1);
+  }
+
+  .naranjaOscuro-naranja {
+    background: linear-gradient(220.55deg, #ec7c6a 0%, #d82a0f 100%);
+    box-shadow:
+      0 0 15px rgba(236, 124, 106, 1),
+      0 0 15px rgba(216, 42, 15, 1);
+  }
+
+  .azulCyan-azulFuerte {
+    background: linear-gradient(220.55deg, #259eac 0%, #16565d 100%);
+    box-shadow:
+      0 0 15px rgba(37, 158, 172, 1),
+      0 0 15px rgba(22, 86, 93, 1);
+  }
+
+  .amarillo-negro {
+    background: linear-gradient(220.55deg, #c6c661 0%, #4a4c1f 100%);
+    box-shadow:
+      0 0 15px rgba(198, 198, 97, 1),
+      0 0 15px rgba(74, 76, 31, 1);
+  }
+
+  .rosa-rojo {
+    background: linear-gradient(220.55deg, #ff5180 0%, #ff1010 100%);
+    box-shadow:
+      0 0 15px rgba(255, 81, 128, 1),
+      0 0 15px rgba(255, 16, 16, 1);
+  }
+
+  .azul-morado {
+    background: linear-gradient(220.55deg, #4643df 0%, #0b0a47 100%);
+    box-shadow:
+      0 0 15px rgba(70, 67, 223, 1),
+      0 0 15px rgba(11, 10, 71, 1);
+  }
+
+  .cyan-azul {
+    background: linear-gradient(220.55deg, #3793ff 0%, #0017e4 100%);
+    box-shadow:
+      0 0 15px rgba(55, 147, 255, 1),
+      0 0 15px rgba(0, 23, 228, 1);
+  }
+
+  .verde-azul {
+    background: linear-gradient(220.55deg, #439b3b 0%, #147ada 100%);
+    box-shadow:
+      0 0 15px rgba(67, 155, 59, 1),
+      0 0 15px rgba(20, 122, 218, 1);
+  }
+
+  .rojo-rojoFuerte {
+    background: linear-gradient(220.55deg, #ff607d 0%, #300b12 100%);
+    box-shadow:
+      0 0 15px rgba(255, 96, 125, 1),
+      0 0 15px rgba(48, 11, 18, 1);
+  }
+
+  .verde-azulClaro {
+    background: linear-gradient(220.55deg, #027c02 0%, #0482ab 100%);
+    box-shadow:
+      0 0 15px rgba(2, 124, 2, 1),
+      0 0 15px rgba(4, 130, 171, 1);
+  }
+
+  .lila-morado {
+    background: linear-gradient(220.55deg, #deb5ff 0%, #6f00b3 100%);
+    box-shadow:
+      0 0 15px rgba(222, 181, 255, 1),
+      0 0 15px rgba(111, 0, 179, 1);
+  }
+
+  .yellow-pink {
+    background: linear-gradient(220.55deg, #ffed46 0%, #b8287a 100%);
+    box-shadow:
+      0 0 15px rgba(255, 206, 0, 1),
+      0 0 15px rgba(184, 40, 122, 1);
+  }
+
+  @media screen and (max-width: 700px) {
+    .swiper-slide {
+      width: 60%;
+    }
+  }
+
+  @media screen and (max-width: 450px) {
+    .swiper-slide {
+      width: 80%;
+    }
+  }
+</style>

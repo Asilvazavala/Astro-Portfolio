@@ -1,5 +1,6 @@
 ---
 import ToggleTheme from "../helpers/ToggleTheme.astro";
+import ToggleLanguage from "../helpers/ToggleLanguage.astro";
 import XIcon from "../icons/XIcon.astro";
 import MenuIcon from "../icons/MenuIcon.astro";
 import NavbarData from "../utils/NavbarData.astro";
@@ -67,9 +68,10 @@ const {
 
     <aside
       class="absolute max-[1024px]:top-4 transition duration-700
-    max-[1024px]:bottom-0 max-[1024px]:right-16 lg:relative lg:flex lg:justify-center lg:items-center"
+    max-[1024px]:bottom-0 max-[1024px]:right-16 lg:relative flex lg:justify-center lg:items-center gap-x-4"
     >
       <ToggleTheme />
+      <ToggleLanguage />
     </aside>
   </nav>
 </div>

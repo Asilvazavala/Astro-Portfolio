@@ -7,7 +7,17 @@ import SectionContainer from "./SectionContainer.astro";
 import Title from "./Shared/Title.astro";
 import "@fontsource/rubik-dirt";
 
-const { title, featured_1, featured_2 } = Astro.props;
+const {
+  title,
+  featured_1,
+  featured_2,
+  form_name,
+  form_name_placeholder,
+  form_email,
+  form_message,
+  form_message_placeholder,
+  btn,
+} = Astro.props;
 ---
 
 <SectionContainer className="pb-20">
@@ -68,10 +78,78 @@ const { title, featured_1, featured_2 } = Astro.props;
       >
     </article>
   </main>
+
+  <form
+    action="https://formsubmit.co/c985d2a549f57e35c2cc0011b290fe39"
+    method="POST"
+    class="flex flex-col justify-center items-center gap-y-8 mt-12"
+  >
+    <label
+      class="flex flex-col w-full max-w-96 dark:text-gray text-grayStrong text-lg"
+    >
+      {form_name}
+      <input
+        id="name"
+        name="name"
+        required
+        placeholder={form_name_placeholder}
+        type="text"
+        class="bg-transparent py-3 px-5 rounded outline outline-1 dark:outline-primary outline-fifth
+        focus:outline-2 dark:text-white text-third"
+      />
+    </label>
+
+    <label
+      class="flex flex-col w-full max-w-96 dark:text-gray text-grayStrong text-lg"
+    >
+      {form_email}
+      <input
+        id="email"
+        name="email"
+        required
+        placeholder="correo@mail.com"
+        type="email"
+        class="bg-transparent py-3 px-5 rounded outline outline-1 dark:outline-primary outline-fifth
+        focus:outline-2 dark:text-white text-third"
+      />
+    </label>
+
+    <label
+      class="flex flex-col w-full max-w-96 dark:text-gray text-grayStrong text-lg"
+    >
+      {form_message}
+      <textarea
+        id="message"
+        name="message"
+        placeholder={form_message_placeholder}
+        required
+        rows="7"
+        class="bg-transparent py-3 px-5 rounded outline outline-1 dark:outline-primary outline-fifth
+        focus:outline-2 dark:text-white text-third"
+      ></textarea>
+    </label>
+
+    <input type="hidden" name="_next" value="http://localhost:4321/" />
+    <input type="hidden" name="_captcha" value="false" />
+
+    <button
+      type="submit"
+      class="text-white bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700
+      lg:hover:bg-gradient-to-br shadow-lg shadow-purple-500/50 transition lg:hover:shadow-2xl
+    lg:hover:shadow-purple-800/80 dark:shadow-purple-800/80 font-medium rounded-lg text-lg px-5
+      py-2.5 text-center w-full max-w-96"
+    >
+      {btn}
+    </button>
+  </form>
 </SectionContainer>
 
 <style>
   h2 {
     font-family: "Rubik Dirt", sans-serif;
+  }
+
+  input::placeholder {
+    color: #94a3b8;
   }
 </style>

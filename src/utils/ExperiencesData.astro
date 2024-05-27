@@ -13,6 +13,9 @@ import ShoppingCartIcon from "../icons/ShoppingCartIcon.astro";
 import StatisticsIcon from "../icons/StatisticsIcon.astro";
 import TailwindIcon from "../icons/TailwindIcon.astro";
 import TypeScriptIcon from "../icons/TypeScriptIcon.astro";
+import ToolIcon from "../icons/ToolIcon.astro";
+import HandIcon from "../icons/HandIcon.astro";
+import WeddingIcon from "../icons/WeddingIcon.astro";
 
 interface ExperiencesIconsType {
   [key: string]: (_props: Record<string, any>) => any;
@@ -41,6 +44,9 @@ export const experiencesIcons: ExperiencesIconsType = {
   StatisticsIcon,
   TailwindIcon,
   TypeScriptIcon,
+  ToolIcon,
+  HandIcon,
+  WeddingIcon,
 };
 
 import { getI18N } from "../i18n/";
@@ -140,10 +146,22 @@ const experiences: experiencesProps[] = [
     description: i18n.EXPERIENCE_DESCRIPTION_15,
   },
   {
-    icon: "AngularIcon",
+    icon: "ToolIcon",
     title: i18n.EXPERIENCE_TITLE_16,
     description: i18n.EXPERIENCE_DESCRIPTION_16,
     link: "https://devtools-as.vercel.app/",
+  },
+  {
+    icon: "HandIcon",
+    title: i18n.EXPERIENCE_TITLE_17,
+    description: i18n.EXPERIENCE_DESCRIPTION_17,
+    link: "https://elecciones-2024.vercel.app/",
+  },
+  {
+    icon: "WeddingIcon",
+    title: i18n.EXPERIENCE_TITLE_18,
+    description: i18n.EXPERIENCE_DESCRIPTION_18,
+    link: "https://cinytono.vercel.app/",
   },
 ];
 ---
@@ -153,7 +171,7 @@ const experiences: experiencesProps[] = [
     const CurrentIcon = experiencesIcons[icon];
 
     return (
-      <article class="flex flex-col max-h-[50px] experience-article">
+      <article class="flex flex-col max-h-[50px] experience-article transition-all">
         <div class="flex flex-col justify-center items-center relative">
           <span class="dark:text-gray text-grayStrong absolute top-0 -left-4 experience-year">
             {year}
@@ -229,6 +247,11 @@ const experiences: experiencesProps[] = [
 </script>
 
 <style>
+  .experience-year,
+  .vertical-line,
+  .experience-icon {
+    transition: 0.3s ease-in-out;
+  }
   .experience-article.active .vertical-line {
     height: 100px;
     background-color: #8c2de0;

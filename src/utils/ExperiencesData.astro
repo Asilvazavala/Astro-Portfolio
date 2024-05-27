@@ -55,18 +55,18 @@ const { currentLocale } = Astro;
 const i18n = getI18N({ currentLocale });
 
 const experiences: experiencesProps[] = [
-  {
-    year: 2015,
-    icon: "ExperienceIcon",
-    title: i18n.EXPERIENCE_TITLE_1,
-    description: i18n.EXPERIENCE_DESCRIPTION_1,
-  },
-  {
-    year: 2020,
-    icon: "PHPIcon",
-    title: i18n.EXPERIENCE_TITLE_2,
-    description: i18n.EXPERIENCE_DESCRIPTION_2,
-  },
+  // {
+  //   year: 2015,
+  //   icon: "ExperienceIcon",
+  //   title: i18n.EXPERIENCE_TITLE_1,
+  //   description: i18n.EXPERIENCE_DESCRIPTION_1,
+  // },
+  // {
+  //   year: 2020,
+  //   icon: "PHPIcon",
+  //   title: i18n.EXPERIENCE_TITLE_2,
+  //   description: i18n.EXPERIENCE_DESCRIPTION_2,
+  // },
   {
     year: 2021,
     icon: "ReactIcon",
@@ -282,7 +282,7 @@ const experiences: experiencesProps[] = [
   }
 
   .experience-article:first-child .experience-title {
-    margin-right: -25px;
+    margin-right: -125px;
   }
 
   .experience-article:first-child .experience-button {

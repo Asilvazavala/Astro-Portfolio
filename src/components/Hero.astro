@@ -36,7 +36,11 @@ const { greeting, position, paragraph, btn_1, btn_2 } = Astro.props;
       </p>
 
       <aside class="flex gap-x-6 lg:gap-x-8 mt-2 mx-auto lg:mx-0">
-        <Button className="" title={btn_1} link="tel:4561148433" />
+        <Button
+          className=""
+          title={btn_1}
+          link="https://api.whatsapp.com/send?phone=524561148433&text=¡Hola Antonio! me gustaría trabajar contigo"
+        />
         <ButtonOutline
           className=""
           title={btn_2}

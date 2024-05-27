@@ -247,21 +247,21 @@ const experiences: experiencesProps[] = [
 </script>
 
 <style>
+  .vertical-line {
+    transition: height 0.3s ease-in-out;
+  }
   .experience-year,
-  .vertical-line,
   .experience-icon {
-    transition: 0.3s ease-in-out;
+    transition: color 0.3s ease-in-out;
   }
   .experience-article.active .vertical-line {
     height: 100px;
     background-color: #8c2de0;
-    transition: height 0.3s ease-in-out;
   }
 
   body.dark .experience-article.active .vertical-line {
     height: 100px;
     background-color: #00abf0;
-    transition: height 0.3s ease-in-out;
   }
 
   body.dark .experience-article.active .experience-year,

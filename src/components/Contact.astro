@@ -29,56 +29,6 @@ const {
     <Title className="text-4xl lg:text-5xl" title={title} />
   </div>
 
-  <main
-    class="grid grid-cols-1 lg:grid-cols-3 px-8 py-8 lg:py-16 rounded-xl dark:bg-primary dark:text-secondary
-  gap-10 shadow-md shadow-white border-2 border-white bg-fifth text-white"
-  >
-    <article
-      class="text-4xl lg:text-5xl col-span-1 flex justify-center items-center"
-    >
-      <h2 class="animate-scaleUp">{featured_1}</h2>
-    </article>
-
-    <article class="col-span-1 flex flex-col justify-center items-center">
-      <p class="text-center font-light">
-        {featured_2}
-      </p>
-      <a
-        class="underline font-medium lg:hover:brightness-200 transition"
-        href="mailto:asilvazavala@gmail.com"
-        target="_blank"
-        rel="noopener"
-      >
-        asilvazavala@gmail.com
-      </a>
-    </article>
-
-    <article
-      class="col-span-1 flex gap-x-2 justify-center items-center dark:text-secondary"
-    >
-      <a
-        class="lg:hover:scale-125 transform transition"
-        target="_blank"
-        rel="noopener"
-        href="https://github.com/Asilvazavala"><GithubIcon class="size-10" /></a
-      >
-      <a
-        class="lg:hover:scale-125 transform transition"
-        target="_blank"
-        rel="noopener"
-        href="https://www.linkedin.com/in/antonio-silva-developer/"
-        ><LinkedinIcon class="size-10" /></a
-      >
-      <a
-        class="lg:hover:scale-125 transform transition"
-        target="_blank"
-        rel="noopener"
-        href="https://api.whatsapp.com/send?phone=524561148433&text=¡Hola Antonio! me gustaría trabajar contigo"
-        ><WhatsappIcon class="size-10" /></a
-      >
-    </article>
-  </main>
-
   <form
     action="https://formsubmit.co/c985d2a549f57e35c2cc0011b290fe39"
     method="POST"
@@ -142,6 +92,56 @@ const {
       {btn}
     </button>
   </form>
+
+  <main
+    class="grid grid-cols-1 lg:grid-cols-3 px-8 py-8 lg:py-16 rounded-xl dark:bg-primary dark:text-secondary
+gap-10 shadow-md shadow-white border-2 border-white bg-fifth text-white mt-32"
+  >
+    <article
+      class="text-4xl lg:text-5xl col-span-1 flex justify-center items-center"
+    >
+      <h2 class="animate-scaleUp">{featured_1}</h2>
+    </article>
+
+    <article class="col-span-1 flex flex-col justify-center items-center">
+      <p class="text-center font-light">
+        {featured_2}
+      </p>
+      <a
+        class="underline font-medium lg:hover:brightness-200 transition"
+        href="mailto:asilvazavala@gmail.com"
+        target="_blank"
+        rel="noopener"
+      >
+        asilvazavala@gmail.com
+      </a>
+    </article>
+
+    <article
+      class="col-span-1 flex gap-x-2 justify-center items-center dark:text-secondary"
+    >
+      <a
+        class="lg:hover:scale-125 transform transition"
+        target="_blank"
+        rel="noopener"
+        href="https://github.com/Asilvazavala"><GithubIcon class="size-10" /></a
+      >
+      <a
+        class="lg:hover:scale-125 transform transition"
+        target="_blank"
+        rel="noopener"
+        href="https://www.linkedin.com/in/antonio-silva-developer/"
+        ><LinkedinIcon class="size-10" /></a
+      >
+      <a
+        class="lg:hover:scale-125 transform transition"
+        target="_blank"
+        rel="noopener"
+        href="https://api.whatsapp.com/send?phone=524561148433&text=¡Hola Antonio! me gustaría trabajar contigo"
+        ><WhatsappIcon class="size-10" /></a
+      >
+    </article>
+  </main>
 </SectionContainer>
 
 <style>

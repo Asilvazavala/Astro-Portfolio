@@ -171,15 +171,15 @@ const experiences: experiencesProps[] = [
     const CurrentIcon = experiencesIcons[icon];
 
     return (
-      <article class="flex flex-col max-h-[50px] experience-article transition-all">
+      <article class="flex flex-col max-h-[50px] experience-article">
         <div class="flex flex-col justify-center items-center relative">
           <span class="dark:text-gray text-grayStrong absolute top-0 -left-4 experience-year">
             {year}
           </span>
           <div class="flex mt-8 relative">
             <aside
-              class="flex h-12 w-[2.5px] bg-gray mr-28 vertical-line
-        dark:bg-grayStrong text-grayStrong text-sm"
+              class="flex h-12 w-[2.5px] bg-gray mr-28 vertical-line dark:bg-grayStrong 
+              text-grayStrong text-sm"
             >
               <div class="absolute -top-1 left-0 flex justify-start items-start gap-x-2 separator">
                 {Array(10)

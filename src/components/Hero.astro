@@ -44,7 +44,9 @@ const { greeting, position, paragraph, btn_1, btn_2 } = Astro.props;
         <ButtonOutline
           className=""
           title={btn_2}
-          link="/documents/ANTONIO SILVA FRONT-END CV Espanol.pdf"
+          link={btn_2.includes("Resume")
+            ? "/documents/ANTONIO SILVA FRONT-END English CV.pdf"
+            : "/documents/ANTONIO SILVA FRONT-END Espanol CV.pdf"}
         />
       </aside>
     </article>

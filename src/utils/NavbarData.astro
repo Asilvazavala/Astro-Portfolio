@@ -61,3 +61,26 @@ const navbarLinks: navbarLinksProps[] = [
     </li>
   ))
 }
+
+<style>
+  li {
+    position: relative;
+    overflow: hidden;
+  }
+
+  li::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: currentColor;
+    transform-origin: left;
+    transition: width 0.5s ease;
+  }
+
+  li:hover::before {
+    width: 100%;
+  }
+</style>

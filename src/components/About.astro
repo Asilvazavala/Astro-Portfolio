@@ -31,9 +31,11 @@ const { title, paragraph_1, paragraph_2, featured_1, featured_2, featured_3 } =
     >
       <aside class="flex justify-center items-center flex-col w-1/2 gap-y-2">
         <span
+          data-target="2"
           class="bg-clip-text text-transparent bg-gradient-to-r dark:from-blue-500
-        dark:to-teal-400 from-fifth to-purple-500 text-5xl lg:text-7xl leading-tight tracking-wide mb-[-0.7rem]"
-          >2+</span
+        dark:to-teal-400 from-fifth to-purple-500 text-[55px] lg:text-7xl leading-tight
+        tracking-wide mb-[-0.7rem] counter"
+          >0+</span
         >
         <span class="lg:text-2xl text-xl dark:text-white text-secondary"
           >{featured_1}</span
@@ -42,9 +44,11 @@ const { title, paragraph_1, paragraph_2, featured_1, featured_2, featured_3 } =
 
       <aside class="flex justify-center items-center flex-col w-1/2 gap-y-2">
         <span
+          data-target="15"
           class="bg-clip-text text-transparent bg-gradient-to-r dark:from-blue-500
-        dark:to-teal-400 from-fifth to-purple-500 text-5xl lg:text-7xl leading-tight tracking-wide mb-[-0.7rem]"
-          >15+</span
+        dark:to-teal-400 from-fifth to-purple-500 text-[55px] lg:text-7xl leading-tight
+        tracking-wide mb-[-0.7rem] counter"
+          >0+</span
         >
         <span class="lg:text-2xl text-xl dark:text-white text-secondary"
           >{featured_2}</span
@@ -53,9 +57,11 @@ const { title, paragraph_1, paragraph_2, featured_1, featured_2, featured_3 } =
 
       <aside class="flex justify-center items-center flex-col w-1/2 gap-y-2">
         <span
+          data-target="7"
           class="bg-clip-text text-transparent bg-gradient-to-r dark:from-blue-500
-        dark:to-teal-400 from-fifth to-purple-500 text-5xl lg:text-7xl leading-tight tracking-wide mb-[-0.7rem]"
-          >7+</span
+        dark:to-teal-400 from-fifth to-purple-500 text-[55px] lg:text-7xl leading-tight
+        tracking-wide mb-[-0.7rem] counter"
+          >0+</span
         >
         <span class="lg:text-2xl text-xl dark:text-white text-secondary"
           >{featured_3}</span
@@ -64,9 +70,11 @@ const { title, paragraph_1, paragraph_2, featured_1, featured_2, featured_3 } =
 
       <aside class="flex justify-center items-center flex-col w-1/2 gap-y-2">
         <span
+          data-target="900"
           class="bg-clip-text text-transparent bg-gradient-to-r dark:from-blue-500
-        dark:to-teal-400 from-fifth to-purple-500 text-5xl lg:text-7xl leading-tight tracking-wide mb-[-0.7rem]"
-          >900+</span
+        dark:to-teal-400 from-fifth to-purple-500 text-[55px] lg:text-7xl leading-tight
+        tracking-wide mb-[-0.7rem] counter"
+          >0+</span
         >
         <span class="lg:text-2xl text-xl dark:text-white text-secondary"
           >Commits</span
@@ -75,3 +83,46 @@ const { title, paragraph_1, paragraph_2, featured_1, featured_2, featured_3 } =
     </article>
   </main>
 </SectionContainer>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const counters = document.querySelectorAll(".counter");
+    const duration = 700;
+    const frameRate = 60;
+
+    function updateCounter(counterElement: any) {
+      const targetNumber = +counterElement.getAttribute("data-target");
+      const increment = targetNumber / (duration / (1000 / frameRate));
+      let currentNumber = 0;
+
+      function count() {
+        currentNumber += increment;
+        if (currentNumber >= targetNumber) {
+          counterElement.textContent = targetNumber + "+";
+        } else {
+          counterElement.textContent = Math.ceil(currentNumber) + "+";
+          requestAnimationFrame(count);
+        }
+      }
+
+      requestAnimationFrame(count);
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const counterElement = entry.target;
+            updateCounter(counterElement);
+            observer.unobserve(counterElement);
+          }
+        });
+      },
+      {
+        threshold: 0.1,
+      }
+    );
+
+    counters.forEach((counter) => observer.observe(counter));
+  });
+</script>

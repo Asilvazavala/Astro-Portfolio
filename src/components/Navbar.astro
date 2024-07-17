@@ -24,8 +24,6 @@ const {
         class="size-8 rounded-full cursor-pointer lg:size-6 hidden dark:block"
         src="/imagenes/General/LogoAS-dark.webp"
         alt="Logo"
-        width="208"
-        height="170"
       />
 
       <img
@@ -33,8 +31,6 @@ const {
         src="/imagenes/General/LogoAS.webp"
         alt="Logo"
         title="Logo"
-        width="208"
-        height="170"
       />
     </a>
 
@@ -67,8 +63,10 @@ const {
     </ul>
 
     <aside
-      class="absolute max-[1024px]:top-4 transition duration-700
-    max-[1024px]:bottom-0 max-[1024px]:right-16 lg:relative flex lg:justify-center lg:items-center gap-x-4"
+      id="toggles"
+      class="absolute max-[1024px]:top-4 transition duration-700 gap-x-4 scale-0
+      max-[1024px]:bottom-0 max-[1024px]:right-16
+      lg:relative flex lg:justify-center lg:items-center lg:scale-100"
     >
       <ToggleTheme />
       <ToggleLanguage />
@@ -80,6 +78,7 @@ const {
   const menuIcon = document.getElementById("menuIcon");
   const closeMenuIcon = document.getElementById("closeMenuIcon");
   const menuMobile = document.getElementById("menuMobile");
+  const toggles = document.getElementById("toggles");
   const menuItems = document.querySelectorAll("li");
 
   const toggleItems = () => {
@@ -90,6 +89,9 @@ const {
     closeMenuIcon?.classList.toggle("scale-0");
     closeMenuIcon?.classList.toggle("delay-0");
     closeMenuIcon?.classList.toggle("delay-200");
+    toggles?.classList.toggle("scale-0");
+    toggles?.classList.toggle("delay-0");
+    toggles?.classList.toggle("delay-200");
   };
 
   menuIcon?.addEventListener("click", () => {

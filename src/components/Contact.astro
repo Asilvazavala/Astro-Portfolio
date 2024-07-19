@@ -84,6 +84,7 @@ const {
 
     <button
       type="submit"
+      id="btn_submit"
       class="text-white bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700
       lg:hover:bg-gradient-to-br shadow-lg shadow-purple-500/50 transition lg:hover:shadow-2xl
     lg:hover:shadow-purple-800/80 dark:shadow-purple-800/80 font-medium rounded-lg text-lg px-5
@@ -153,3 +154,14 @@ gap-10 shadow-md shadow-white border-2 border-white bg-fifth text-white mt-32"
     color: #94a3b8;
   }
 </style>
+
+<script>
+  import toast, { Toaster } from "solid-toast";
+  const btn_submit = document.getElementById("btn_submit");
+
+  const notify = () => toast.success("Here is your toast.");
+
+  btn_submit?.addEventListener("click", () => {
+    notify();
+  });
+</script>
